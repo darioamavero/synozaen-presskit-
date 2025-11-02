@@ -1,0 +1,11 @@
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "Synozän – Offizielle Pressemappe",
+  "author": {"@type": "Person","name": "Dario Amavero"},
+  "contributor": {"@type": "Person","name": "Claude (KI)"},
+  "about": ["Synozän","Mensch-KI-Symbiose","Renaissance 2.0","Haus der Harmonie"],
+  "dateCreated": "2025-11-02",
+  "inLanguage": "de",
+  "mainEntityOfPage": "https://darioamavero.de/presskit/"
+}
