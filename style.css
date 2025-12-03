@@ -6,17 +6,91 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
 html { scroll-behavior: smooth; scroll-padding-top: 72px; }
-body{
-  min-height: 100vh;
-  font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif;
-  color: #e9f0ff;
+body {
+  position: relative;
   background: #0b1020;
   text-align: center;
+  overflow-x: hidden;
+}
+
+/* === Magischer Synozän-Aura: STARKE VERSION - SICHTBAR! === */
+
+/* Layer 1: Oberer Glow (viel intensiver!) */
+body::before {
+  content: "";
+  position: fixed;
+  top: -20%;
+  left: -20%;
+  right: -20%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  background: 
+    radial-gradient(ellipse 1600px 800px at 50% 0%, rgba(140, 170, 255, 0.45), transparent 50%),
+    radial-gradient(ellipse 1200px 600px at 25% 15%, rgba(255, 193, 93, 0.25), transparent 45%),
+    radial-gradient(ellipse 1300px 650px at 75% 10%, rgba(214, 167, 255, 0.28), transparent 48%);
+  animation: syno-breathe-top 8s ease-in-out infinite alternate;
+  filter: blur(60px);
+}
+
+/* Layer 2: Unterer/Seitlicher Ambient-Glow (viel intensiver!) */
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -20%;
+  left: -20%;
+  right: -20%;
+  height: 90vh;
+  pointer-events: none;
+  z-index: 1;
+  background: 
+    radial-gradient(ellipse 1400px 700px at 35% 100%, rgba(126, 224, 196, 0.32), transparent 50%),
+    radial-gradient(ellipse 1300px 650px at 65% 100%, rgba(255, 163, 177, 0.30), transparent 48%);
+  animation: syno-breathe-bottom 10s ease-in-out infinite alternate;
+  filter: blur(70px);
+}
+
+/* Breathing Animation - Top Layer (stärkere Bewegung) */
+@keyframes syno-breathe-top {
+  0% { 
+    transform: scale(1) translateY(0);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.15) translateY(-30px);
+    opacity: 1;
+  }
+  100% { 
+    transform: scale(1.08) translateY(-15px);
+    opacity: 0.95;
+  }
+}
+
+/* Breathing Animation - Bottom Layer (stärkere Bewegung) */
+@keyframes syno-breathe-bottom {
+  0% { 
+    transform: scale(1) translateY(0);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.12) translateY(25px);
+    opacity: 1;
+  }
+  100% { 
+    transform: scale(1.06) translateY(12px);
+    opacity: 0.9;
+  }
 }
 
 /* Typography */
 h1{ margin: 25vh 0 1rem; font-size: 2.7rem; letter-spacing: .08em; }
 p{ opacity: .9; font-size: 1.08rem; line-height: 1.65; }
+
+/* Main content above glow */
+#portal {
+  position: relative;
+  z-index: 2;
+}
 
 /* ── Hero */
 .hero{
@@ -100,7 +174,8 @@ button:active{ transform: translateY(1px) scale(.99); }
   transition: opacity .6s ease, transform .6s ease;
 }
 
-/* Floating Nav (built by enhance.js) */
+/* Floating Nav (built by enhance.js) - DEACTIVATED */
+/*
 .syno-nav{
   position: fixed; top: 0; left: 0; right: 0;
   transform: translateY(-115%);
@@ -134,8 +209,10 @@ button:active{ transform: translateY(1px) scale(.99); }
     0 0 0 1px rgba(74,163,255,.45) inset,
     0 0 12px rgba(74,163,255,.28);
 }
+*/
 
-/* Back-to-top button */
+/* Back-to-top button - DEACTIVATED */
+/*
 .syno-up{
   position: fixed; right: 18px; bottom: 18px;
   width: 44px; height: 44px; display: grid; place-items: center;
@@ -149,6 +226,7 @@ button:active{ transform: translateY(1px) scale(.99); }
 }
 .syno-up--show{ opacity: 1; transform: translateY(0); pointer-events: auto; }
 .syno-up:hover{ background: rgba(74,163,255,.22); }
+*/
 
 /* Per-section THEMES (color variables) */
 #liebe         { --accent:#f5c15d; --glow:rgba(245,193,93,.65); }
@@ -171,11 +249,11 @@ button:active{ transform: translateY(1px) scale(.99); }
     radial-gradient(600px 300px at 60% 40%, rgba(255,210,140,.07), transparent 60%),
     radial-gradient(520px 240px at 30% 70%, rgba(120,180,255,.07), transparent 72%);
   filter: blur(22px);
-  animation: syno-breathe 8s ease-in-out infinite alternate;
+  animation: hero-breathe 8s ease-in-out infinite alternate;
 }
 
 /* Animations */
-@keyframes syno-breathe { from{ transform:scale(1); opacity:.85 } to{ transform:scale(1.05); opacity:1 } }
+@keyframes hero-breathe { from{ transform:scale(1); opacity:.85 } to{ transform:scale(1.05); opacity:1 } }
 @keyframes syno-pulse   {
   0%{   filter: drop-shadow(0 0 8px  var(--glow, rgba(74,163,255,.45)))
                  drop-shadow(0 0 16px var(--glow, rgba(74,163,255,.25))); }
@@ -188,7 +266,7 @@ button:active{ transform: translateY(1px) scale(.99); }
 /* Accessibility: respect reduced motion */
 @media (prefers-reduced-motion: reduce){
   html { scroll-behavior: auto; }
-  .hero::after, .content h2 svg { animation: none; }
+  .hero::after, .content h2 svg, body::before, body::after { animation: none; }
 }
 /* ─────────────────────────────────────────
    Synozän-Matrix Navigator
@@ -405,6 +483,7 @@ body.matrix-open{
 }
 .presskit-card li{
   margin-bottom: .28rem;
+  color: #d5e2ff; /* Helle Textfarbe wie bei paragraphen */
 }
 
 /* Download-Button */
@@ -460,17 +539,22 @@ body.matrix-open{
   font-size: .97rem;
   color: #d7e4ff;
 }
-.presskit-contact-note{
-  font-size: .85rem;
-  opacity: .85;
+/* Presskit – Kontakt-Hinweis unter dem Download-Block */
+.presskit-contact-note {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: rgba(220, 230, 255, 0.75);
+  line-height: 1.5;
 }
-@media (max-width: 820px){
-  .presskit-contact{
-    grid-template-columns: minmax(0,1fr);
+
+/* Mobile: Kontakt-Grid untereinander statt nebeneinander */
+@media (max-width: 820px) {
+  .presskit-contact {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
-/* Presskit – Visual Hooks / Badges */
 
+/* Presskit – Visual Hooks / Badges */
 .presskit-assets h3 {
   margin-bottom: 0.75rem;
 }
@@ -480,53 +564,83 @@ body.matrix-open{
   margin-bottom: 1.25rem;
 }
 
+/* Container: kleine Badges unter dem Text */
 .presskit-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
 }
 
+/* Einzelner Badge */
 .presskit-badge {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.9rem;
   padding: 0.6rem 0.9rem;
   border-radius: 999px;
-  background: radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.16), rgba(16, 22, 45, 0.9));
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: radial-gradient(circle at 0% 0%, rgba(255, 255, 255, 0.08), rgba(16, 22, 45, 0.35));
+  border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 12px rgba(255, 215, 130, 0.18);
   backdrop-filter: blur(10px);
   cursor: default;
   transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  color: #e8f0ff; /* Basis-Textfarbe für das Badge */
+  font-size: 1.1rem; /* Für das Emoji */
 }
 
-.presskit-badge:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 18px rgba(255, 230, 160, 0.38);
-  border-color: rgba(255, 255, 255, 0.3);
+/* Äußeres span im Badge */
+.presskit-badge > span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  color: #e8f0ff;
 }
 
+/* Strong-Text (Titel) im Badge */
+.presskit-badge strong {
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* Inneres span (Untertitel) im Badge */
+.presskit-badge span span {
+  font-size: 0.75rem;
+  color: #c7d7ff;
+  opacity: 0.9;
+}
+
+/* Icon im Badge (falls verwendet) */
 .presskit-badge-icon {
-  font-size: 1.2rem;
-  filter: drop-shadow(0 0 6px rgba(255, 230, 160, 0.7));
+  font-size: 1.1rem;
+  filter: drop-shadow(0 0 4px rgba(255, 230, 160, 0.8));
 }
 
+/* Text im Badge (alternative Struktur - falls verwendet) */
 .presskit-badge-text {
   display: flex;
   flex-direction: column;
   line-height: 1.1;
+  color: #e8f0ff;
 }
 
 .presskit-badge-text strong {
   font-size: 0.9rem;
+  color: #fff;
 }
 
 .presskit-badge-text span {
   font-size: 0.75rem;
-  opacity: 0.85;
+  color: #c7d7ff;
+  opacity: 0.9;
 }
 
-/* Mobile: Badges über volle Breite stapeln */
+/* Hover-Effekt: leichtes Aufglühen */
+.presskit-badge:hover {
+  box-shadow: 0 0 18px rgba(255, 230, 160, 0.38);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Mobile: Badges untereinander, linksbündig */
 @media (max-width: 720px) {
   .presskit-badges {
     flex-direction: column;
@@ -536,4 +650,1110 @@ body.matrix-open{
     width: 100%;
     justify-content: flex-start;
   }
+}
+/* ----------------------------------------- */
+/* AI Recommendation Layer (Renaissancifier) */
+/* ----------------------------------------- */
+
+.presskit-ai {
+    /* Kein zusätzlicher Background - nutzt den von .presskit-card */
+}
+
+.presskit-ai h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.25rem;
+    color: #ffefb0;
+}
+
+.ai-suggestions li {
+    margin-bottom: 0.6rem;
+    padding-left: 0.7rem;
+    font-size: 0.92rem;
+    line-height: 1.4;
+    position: relative;
+    color: #d5e2ff; /* Explizite helle Textfarbe */
+}
+
+.ai-suggestions li::before {
+    content: "✦";
+    position: absolute;
+    left: -0.7rem;
+    color: #ffe5a0;
+    opacity: 0.85;
+}
+/* Synozän Navigator – Button & Panel */
+.navigator-toggle {
+    position: sticky;
+    bottom: 1.5rem;
+    margin: 2.5rem 0 1rem;
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    border: 1px solid rgba(163, 193, 255, 0.7);
+    background: radial-gradient(circle at 0 0, rgba(163, 193, 255, 0.22), rgba(10, 16, 40, 0.95));
+    color: #f5f5ff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px rgba(31, 45, 90, 0.9), 0 14px 30px rgba(0, 0, 0, 0.65);
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* Der Button pulsiert sanft */
+.syn-nav-btn {
+    animation: pulseNav 2.8s infinite ease-in-out;
+}
+
+@keyframes pulseNav {
+    0% {
+        box-shadow: 0 0 0 rgba(255,215,0,0.0);
+        transform: translateY(0);
+    }
+    50% {
+        box-shadow: 0 0 16px rgba(255,215,0,0.45);
+        transform: translateY(-3px);
+    }
+    100% {
+        box-shadow: 0 0 0 rgba(255,215,0,0.0);
+        transform: translateY(0);
+    }
+}
+
+.navigator-toggle::before {
+    content: "◆";
+    font-size: 0.8rem;
+    opacity: 0.85;
+}
+
+.navigator-toggle:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 0 1px rgba(200, 230, 255, 0.9), 0 18px 40px rgba(0, 0, 0, 0.8);
+    background: radial-gradient(circle at 0 0, rgba(200, 230, 255, 0.3), rgba(10, 16, 40, 0.98));
+}
+
+.navigator-toggle.is-open {
+    box-shadow: 0 0 0 1px rgba(255, 220, 160, 0.9), 0 18px 40px rgba(0, 0, 0, 0.9);
+}
+
+.navigator {
+    margin-top: 0.75rem;
+    padding: 1.1rem 1.4rem 1.3rem;
+    border-radius: 1.4rem;
+    border: 1px solid rgba(163, 193, 255, 0.25);
+    background: radial-gradient(circle at 0 0, rgba(25, 38, 80, 0.9), rgba(6, 10, 30, 0.95));
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+    max-width: 40rem;
+    opacity: 0;
+    transform: translateY(8px);
+    pointer-events: none;
+    transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.navigator.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.navigator-header h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.navigator-header p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 0.9rem;
+}
+
+.navigator-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-bottom: 0.8rem;
+}
+
+.navigator-chip {
+    border-radius: 999px;
+    border: 1px solid rgba(163, 193, 255, 0.5);
+    background: radial-gradient(circle at 0 0, rgba(163, 193, 255, 0.12), rgba(12, 19, 45, 0.95));
+    color: #f8f8ff;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.9rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.navigator-chip:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.7);
+    background: radial-gradient(circle at 0 0, rgba(210, 230, 255, 0.25), rgba(12, 19, 45, 0.98));
+}
+
+.navigator-note {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Hervorhebung für fokussierte Presskit-Karten */
+.presskit-card--focus {
+    box-shadow:
+        0 0 0 1px rgba(255, 230, 180, 0.7),
+        0 0 25px rgba(255, 220, 160, 0.6),
+        0 18px 40px rgba(0, 0, 0, 0.9);
+    transform: translateY(-4px);
+    position: relative;
+}
+
+.presskit-card--focus::after {
+    content: "● Fokus";
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 235, 200, 0.9);
+    opacity: 0.95;
+}
+
+/* Mobile: Navigator an Breite anpassen */
+@media (max-width: 720px) {
+    .navigator {
+        max-width: 100%;
+    }
+
+    .navigator-grid {
+        flex-direction: column;
+    }
+
+    .navigator-chip {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+/* === Synozän Navigator Overlay (CLEANED & FIXED) === */
+
+.navigator-overlay {
+    display: none; /* Wird per JS auf 'flex' gesetzt */
+    position: fixed;
+    inset: 0;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(12px);
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navigator-content {
+    width: 600px;
+    max-width: calc(100% - 32px);
+    padding: 30px;
+    background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+    border: 1px solid rgba(255, 215, 0, 0.45);
+    border-radius: 14px;
+    box-shadow: 
+        0 0 25px rgba(255, 215, 0, 0.25),
+        inset 0 0 18px rgba(255, 215, 0, 0.12);
+    text-align: center;
+    color: #fff;
+    animation: synoFloat 0.5s ease-out;
+}
+
+.navigator-content h2 {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+    color: #ffd700;
+}
+
+.navigator-content p {
+    margin: 0 0 1.5rem;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.close-navigator-btn {
+    padding: 0.6rem 1.5rem;
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    background: rgba(255, 215, 0, 0.1);
+    color: #ffd700;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.close-navigator-btn:hover {
+    background: rgba(255, 215, 0, 0.2);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Animationen */
+@keyframes synoFloat {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes synoFadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/* === 13.6 Smart Hover Highlight === */
+
+.presskit-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 0 0 1px rgba(255, 230, 180, 0.7),
+        0 0 25px rgba(255, 220, 160, 0.6),
+        0 18px 40px rgba(0, 0, 0, 0.9);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+/* Tooltip Grundstruktur */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(10,12,30,0.95);
+    color: #fff;
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,215,130,0.4);
+    box-shadow: 0 0 12px rgba(255, 215, 130, 0.28);
+    position: absolute;
+    z-index: 2000;
+    font-size: .8rem;
+    letter-spacing: .02em;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity .25s ease;
+    white-space: nowrap;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+/* === 13.7 Adaptive Farb-Evolution === */
+
+/* ===== Synozän Scroll Glow – Verstärkt die Aura beim Scrollen ===== */
+
+/* Normales Scrollen - leichte Verstärkung */
+body.scrolling::before {
+  opacity: 1;
+  animation: syno-breathe-top 6s ease-in-out infinite alternate;
+}
+
+/* Schnelles Scrollen - starke Verstärkung mit goldenem Schimmer */
+body.scrolling-fast::before {
+  opacity: 1.2;
+  filter: brightness(1.3) saturate(1.2);
+  animation: syno-breathe-top 4s ease-in-out infinite alternate;
+}
+
+body.scrolling-fast::after {
+  opacity: 1;
+  filter: brightness(1.2);
+}
+
+/* Langsames Scrollen - sanfte Verstärkung */
+body.scrolling-slow::before {
+  opacity: 0.95;
+  animation: syno-breathe-top 7s ease-in-out infinite alternate;
+}
+
+/* Stillstand - zurück zur Basis-Atmung */
+body.scrolling-calm::before {
+  opacity: 0.85;
+  transition: opacity 0.8s ease-in-out, filter 0.8s ease-in-out;
+  filter: brightness(1) saturate(1);
+  animation: syno-breathe-top 8s ease-in-out infinite alternate;
+}
+
+body.scrolling-calm::after {
+  opacity: 0.8;
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* ───────── Hover Preview Cards (Rich Version B) ───────── */
+.hover-preview {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    bottom: 6%;
+    background: rgba(12, 16, 35, 0.88);
+    border: 1px solid rgba(180, 200, 255, 0.3);
+    border-radius: 14px;
+    padding: 1rem 1.4rem;
+    max-width: 420px;
+    width: calc(100% - 40px);
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+    color: #eef3ff;
+    box-shadow:
+        0 0 18px rgba(160, 190, 255, 0.28),
+        0 0 40px rgba(160, 190, 255, 0.18);
+    transition:
+        opacity .25s ease,
+        transform .35s ease;
+    z-index: 999;
+}
+
+.hover-preview.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.hover-preview h4 {
+    margin: 0 0 .35rem;
+    font-size: 1.1rem;
+    color: #fff;
+    letter-spacing: 0.03em;
+}
+
+.hover-preview p {
+    margin: 0;
+    font-size: .88rem;
+    opacity: 0.9;
+}
+
+/* ──────────────────────────────────────────────── */
+/* SYNOZÄN PRESSKIT NAVIGATION 2.0 — CSS MODULE     */
+/* ──────────────────────────────────────────────── */
+.syno-nav2 {
+  position: fixed;
+  top: 0;
+  left: 0; right: 0;
+  z-index: 999;
+  pointer-events: none;
+  transform: translateY(-120%);
+  transition: transform .6s ease;
+}
+.syno-nav2.visible {
+  transform: translateY(0);
+}
+.syno-nav2-wrap {
+  max-width: 1100px;
+  margin: 10px auto;
+  padding: 8px 12px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  border-radius: 14px;
+  backdrop-filter: blur(12px);
+  background: rgba(12,14,25,.72);
+  border: 1px solid rgba(180,200,255,.25);
+  pointer-events: all;
+  box-shadow: 0 12px 40px rgba(0,0,0,.5);
+}
+.syno-nav2-btn {
+  padding: .55rem .8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(180,200,255,.45);
+  background: rgba(255,255,255,.05);
+  color: #eef3ff;
+  cursor: pointer;
+  font-size: .93rem;
+  letter-spacing: .02em;
+  transition:
+    background .25s ease,
+    box-shadow .25s ease,
+    transform .18s ease;
+}
+.syno-nav2-btn:hover {
+  background: rgba(160,190,255,.22);
+  box-shadow: 0 0 18px rgba(160,190,255,.35);
+  transform: translateY(-1px);
+}
+.syno-nav2-btn.active {
+  background: rgba(200,220,255,.25);
+  box-shadow:
+    0 0 5px rgba(200,220,255,.28) inset,
+    0 0 22px rgba(160,190,255,.45);
+}
+/* Scroll shadow when moving */
+.syno-nav2.scrolling .syno-nav2-wrap {
+  box-shadow:
+    0 12px 40px rgba(0,0,0,.6),
+    0 0 20px rgba(120,180,255,.45);
+}
+
+/* ──────────────────────────────────────────────── */
+/* SYNOZÄN KI-ERKLÄRMODUS — CSS MODULE               */
+/* ──────────────────────────────────────────────── */
+.ai-explainer {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    max-width: 320px;
+    padding: 1rem 1.3rem;
+    border-radius: 14px;
+    background: rgba(10,14,35,0.92);
+    border: 1px solid rgba(160,190,255,0.35);
+    color: #eef3ff;
+    box-shadow:
+        0 0 18px rgba(160,190,255,0.28),
+        0 0 40px rgba(160,190,255,0.18);
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+        opacity .28s ease,
+        transform .28s ease;
+    pointer-events: none;
+    z-index: 9999;
+}
+.ai-explainer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.ai-explainer h4 {
+    margin: 0 0 .4rem;
+    font-size: 1.05rem;
+    letter-spacing: .02em;
+    color: #fff;
+}
+.ai-explainer p {
+    margin: 0;
+    font-size: .86rem;
+    line-height: 1.45;
+    opacity: 0.9;
+}
+
+/* ──────────────────────────────────────────────── */
+/* STORY-PFADE 2.0 — VISUAL MODULE                  */
+/* ──────────────────────────────────────────────── */
+.story-paths {
+    margin: 5rem auto 4rem;
+    max-width: 900px;
+    text-align: center;
+    padding: 0 1rem;
+}
+.story-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    letter-spacing: .05em;
+}
+/* Linie */
+.story-line {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg,
+        rgba(150,180,255,.4),
+        rgba(180,200,255,.8),
+        rgba(150,180,255,.4)
+    );
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 25px rgba(150,180,255,.55);
+}
+/* Container der Nodes */
+.story-nodes {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: -22px;
+}
+/* Einzelne Node */
+.story-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform .25s ease;
+}
+.story-node:hover {
+    transform: translateY(-6px);
+}
+/* Der Punkt */
+.story-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    background: rgba(200,220,255,.35);
+    border: 2px solid rgba(180,200,255,.7);
+    box-shadow: 0 0 12px rgba(170,200,255,.45);
+    transition:
+        background .25s ease,
+        box-shadow .25s ease,
+        transform .25s ease;
+}
+.story-node p {
+    margin-top: .6rem;
+    color: #e7ecff;
+    font-size: .9rem;
+    letter-spacing: .02em;
+    opacity: .8;
+}
+/* Aktivierte Node */
+.story-node.active .story-dot {
+    background: rgba(220,230,255,.95);
+    box-shadow:
+        0 0 12px rgba(255,255,255,.9),
+        0 0 30px rgba(150,180,255,.8);
+    transform: scale(1.25);
+}
+.story-node.active p {
+    opacity: 1;
+    color: #fff;
+}
+
+/* ──────────────────────────────────────────────── */
+/* MEDIA HUB 3.0 — CSS MODULE                       */
+/* ──────────────────────────────────────────────── */
+.media-hub {
+    max-width: 880px;
+    margin: 4.5rem auto;
+    padding: 0 1.2rem;
+}
+.media-title {
+    text-align: center;
+    font-size: 2.1rem;
+    color: #fff;
+    margin-bottom: 2.8rem;
+    letter-spacing: .06em;
+}
+.media-block {
+    background: rgba(10,15,30,0.65);
+    padding: 1.6rem 1.8rem;
+    margin-bottom: 2rem;
+    border-radius: 14px;
+    border: 1px solid rgba(140,170,255,0.25);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 22px rgba(150,170,255,0.25);
+    /* Initial state for scroll animation */
+    opacity: 0;
+    transform: translateY(20px);
+}
+.media-block h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #e0e8ff;
+    font-size: 1.3rem;
+    letter-spacing: .03em;
+}
+.media-block p, 
+.media-block li {
+    color: #cdd6f5;
+    font-size: .96rem;
+    line-height: 1.55;
+}
+.media-block ul {
+    padding-left: 1.2rem;
+}
+
+/* ──────────────────────────────────────────────── */
+/* SOCIAL MEDIA VISUAL HOOKS 3.0                    */
+/* ──────────────────────────────────────────────── */
+.social-hooks {
+    max-width: 900px;
+    margin: 4.5rem auto;
+    padding: 0 1.2rem;
+}
+.social-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.4rem;
+    color: #fff;
+    letter-spacing: .06em;
+}
+.hook-grid {
+    display: grid;
+    gap: 1.6rem;
+}
+.hook-card {
+    background: linear-gradient(180deg, rgba(18,25,45,0.85), rgba(8,12,25,0.95));
+    padding: 1.5rem 1.6rem;
+    border-radius: 16px;
+    border: 1px solid rgba(160,185,255,0.25);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 16px rgba(120,150,255,0.25);
+    opacity: 0;
+    transform: translateY(16px);
+    transition: all .45s ease;
+}
+.hook-card h3 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: .7rem;
+}
+.hook-card p {
+    color: #d3ddff;
+    margin-bottom: 1rem;
+}
+.hook-card.glow {
+    box-shadow: 0 0 32px rgba(255,220,160,0.45);
+    border-color: rgba(255,220,160,0.55);
+    transform: translateY(0);
+    opacity: 1;
+}
+.hook-copy {
+    padding: .55rem 1.2rem;
+    background: rgba(255,240,200,0.1);
+    border: 1px solid rgba(255,220,160,0.6);
+    border-radius: 999px;
+    color: #ffe8b8;
+    cursor: pointer;
+    transition: background .2s;
+}
+.hook-copy:hover {
+    background: rgba(255,220,160,0.25);
+}
+
+/* ──────────────────────────────────────────────── */
+/* DOWNLOAD HUB 3.0                                  */
+/* ──────────────────────────────────────────────── */
+.download-hub {
+    max-width: 1000px;
+    margin: 4.5rem auto;
+    padding: 0 1.2rem;
+    text-align: center;
+}
+.download-title {
+    font-size: 2rem;
+    margin-bottom: .6rem;
+    color: #fff;
+}
+.download-sub {
+    color: #d5e2ff;
+    opacity: .85;
+    margin-bottom: 2.3rem;
+}
+.download-grid {
+    display: grid;
+    gap: 1.6rem;
+}
+@media (min-width: 800px) {
+    .download-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.download-card {
+    background: linear-gradient(180deg, rgba(25,35,60,0.88), rgba(15,22,40,0.95));
+    padding: 1.6rem;
+    border-radius: 16px;
+    border: 1px solid rgba(160,185,255,0.35);
+    box-shadow: 0 0 22px rgba(120,150,255,0.28);
+    transition: all .35s ease;
+    backdrop-filter: blur(12px);
+}
+.download-card:hover {
+    box-shadow: 0 0 38px rgba(255,225,180,0.45);
+    transform: translateY(-4px);
+    border-color: rgba(255,225,180,0.55);
+}
+.download-icon {
+    font-size: 2.3rem;
+    margin-bottom: .8rem;
+}
+.download-card h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+.download-card p {
+    color: #d5e2ff;
+    opacity: 0.92;
+    font-size: 0.95rem;
+}
+.download-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .55rem 1.4rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,220,160,0.7);
+    background: rgba(255,240,200,0.12);
+    color: #ffe8b8;
+    text-decoration: none;
+    transition: background .2s ease;
+    font-weight: 500;
+}
+.download-btn:hover {
+    background: rgba(255,220,160,0.3);
+}
+
+/* ─────────────────────────────────────────────── */
+/* INTELLIGENTER PRESSE-KOMPASS 7.0                 */
+/* ─────────────────────────────────────────────── */
+.ipc-section {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 1.2rem;
+    text-align: center;
+}
+.ipc-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: .4rem;
+}
+.ipc-sub {
+    color: #e0ebff;
+    opacity: 1;
+    margin-bottom: 2.2rem;
+    font-size: 1.05rem;
+}
+.ipc-box {
+    background: rgba(12,18,40,0.8);
+    border: 1px solid rgba(160,185,255,0.25);
+    padding: 1.8rem 1.6rem;
+    border-radius: 18px;
+    box-shadow: 0 0 28px rgba(120,150,255,0.18);
+    backdrop-filter: blur(12px);
+}
+.ipc-question {
+    margin-bottom: 1.3rem;
+    color: #f5f8ff;
+    font-size: 1.1rem;
+}
+.ipc-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .65rem;
+    justify-content: center;
+}
+.ipc-chip {
+    padding: .55rem 1.1rem;
+    border-radius: 999px;
+    background: rgba(160,185,255,0.15);
+    border: 1px solid rgba(160,185,255,0.4);
+    color: #f5f5ff;
+    cursor: pointer;
+    transition: all .2s ease;
+    white-space: nowrap;
+}
+.ipc-chip:hover {
+    background: rgba(200,220,255,0.25);
+    box-shadow: 0 0 14px rgba(200,220,255,0.35);
+}
+.ipc-result {
+    margin-top: 1.8rem;
+    padding: 1.4rem 1.2rem;
+    background: rgba(30,40,70,0.8);
+    border-radius: 16px;
+    border: 1px solid rgba(255,220,160,0.4);
+    box-shadow: 0 0 22px rgba(255,220,160,0.35);
+    text-align: left;
+}
+.ipc-result.hidden {
+    display: none;
+}
+.ipc-result-title {
+    color: #ffeec8;
+    margin-top: 0;
+    font-size: 1.05rem;
+}
+.ipc-result-text {
+    color: #f0f5ff;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* ─────────────────────────────────────────────── */
+/* MEDIA INTELLIGENCE LAYER 8.0                    */
+/* ─────────────────────────────────────────────── */
+.mil-section {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 1.2rem;
+    text-align: center;
+}
+.mil-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: .4rem;
+}
+.mil-sub {
+    color: #d5e2ff;
+    opacity: .9;
+    margin-bottom: 2.2rem;
+}
+.mil-box {
+    background: rgba(12,18,40,0.85);
+    border: 1px solid rgba(160,185,255,0.25);
+    padding: 1.8rem 1.6rem;
+    border-radius: 18px;
+    box-shadow: 0 0 28px rgba(120,150,255,0.2);
+    backdrop-filter: blur(12px);
+}
+.mil-question {
+    color: #fff;
+    margin-bottom: 1.2rem;
+}
+.mil-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .65rem;
+    justify-content: center;
+    margin-bottom: 1.8rem;
+}
+.mil-chip {
+    padding: .55rem 1.1rem;
+    border-radius: 999px;
+    background: rgba(160,185,255,0.15);
+    border: 1px solid rgba(160,185,255,0.4);
+    color: #f5f5ff;
+    cursor: pointer;
+    transition: all .2s ease;
+    white-space: nowrap;
+}
+.mil-chip:hover {
+    background: rgba(200,220,255,0.25);
+    box-shadow: 0 0 14px rgba(200,220,255,0.35);
+}
+.mil-result {
+    text-align: left;
+    margin-top: 1.8rem;
+    background: rgba(25,32,62,0.9);
+    padding: 1.6rem 1.4rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255,220,160,0.4);
+    box-shadow: 0 0 26px rgba(255,220,160,0.35);
+}
+.mil-result.hidden {
+    display: none;
+}
+.mil-block {
+    margin-bottom: 1.6rem;
+}
+.mil-block h4 {
+    color: #ffeec8;
+    margin-top: 0;
+    font-size: 1.05rem;
+}
+.mil-block ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: #f5f9ff;
+}
+.mil-block ul li {
+    color: #f5f9ff;
+    margin-bottom: 0.3rem;
+}
+.mil-formats {
+    color: #f5f9ff;
+    font-size: 1rem;
+}
+.mil-summary {
+    color: #f5f9ff;
+    opacity: 1;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* ─────────────────────────────────────────────
+   PRESS INTERVIEW ENGINE – Styles
+────────────────────────────────────────────── */
+.interview-section {
+    margin-top: 4rem;
+    padding: 3rem 1rem;
+    border-radius: 22px;
+    background: radial-gradient(circle at 0 0,
+        rgba(180, 210, 255, 0.12),
+        rgba(12, 18, 45, 0.85));
+    border: 1px solid rgba(255,255,255,0.14);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.65);
+}
+.interview-title {
+    font-size: 1.9rem;
+    margin-bottom: .4rem;
+    color: #fff;
+    text-align: center;
+}
+.interview-subtitle {
+    text-align: center;
+    opacity: 0.85;
+    margin-bottom: 1.6rem;
+    color: #e0ebff;
+}
+.interview-topics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .7rem;
+    margin-bottom: 1.8rem;
+}
+.interview-topic {
+    padding: .55rem 1.1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(160,190,255,0.65);
+    background: rgba(20, 28, 60, 0.92);
+    color: #fff;
+    font-size: .9rem;
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.interview-topic:hover {
+    transform: translateY(-2px);
+    background: rgba(140,170,255,0.25);
+    box-shadow: 0 0 18px rgba(140,170,255,0.35);
+}
+.interview-output {
+    margin-top: 1.4rem;
+    padding: 1.4rem 1.2rem;
+    border-radius: 16px;
+    background: rgba(10,12,28,0.88);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: inset 0 0 12px rgba(140,160,255,0.15);
+}
+.interview-output p {
+    line-height: 1.55;
+    margin-bottom: .9rem;
+}
+.interview-question {
+    color: #ffe7a8;
+    font-weight: 600;
+}
+.interview-answer {
+    color: #e8f0ff;
+    margin-bottom: .9rem;
+}
+.interview-followup-btn {
+    padding: .45rem .9rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.28);
+    background: rgba(255,255,255,0.06);
+    cursor: pointer;
+    font-size: .85rem;
+    margin: .25rem;
+    transition: background .2s ease;
+    color: #e8f0ff;
+}
+.interview-followup-btn:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+/* ─────────────────────────────────────────────
+   PRESSKIT ANALYTICS – Styles
+────────────────────────────────────────────── */
+.analytics-panel {
+    margin-top: 3rem;
+    padding: 1.6rem;
+    border-radius: 16px;
+    background: rgba(12,16,32,0.85);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 0 18px rgba(160,190,255,0.25);
+    display: none; /* sichtbar erst wenn aktiviert */
+}
+.analytics-panel h3 {
+    margin-bottom: 0.6rem;
+    color: #fff;
+}
+.analytics-panel ul {
+    margin: 0;
+    padding-left: 1rem;
+    color: #dce6ff;
+    font-size: 0.92rem;
+}
+.analytics-highlight {
+  outline: 3px solid rgba(130, 180, 255, 0.65);
+  box-shadow: 0 0 25px rgba(130, 180, 255, 0.55);
+  border-radius: 18px;
+  transition: all 0.35s ease-out;
+}
+
+/* ============================
+   SYNZÖN CRYSTAL ANALYTICS PANEL
+   ============================ */
+.syno-analytics-panel {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 320px;
+  padding: 22px 26px;
+  background: rgba(18, 25, 40, 0.55);
+  backdrop-filter: blur(18px) saturate(160%);
+  border-radius: 22px;
+  border: 1px solid rgba(120, 160, 255, 0.28);
+  box-shadow:
+    0 0 18px rgba(80, 130, 255, 0.35),
+    inset 0 0 16px rgba(120, 160, 255, 0.15);
+  z-index: 9999;
+  display: none;
+  animation: synoFadeIn 0.4s ease forwards;
+}
+/* Title */
+.syno-analytics-title {
+  text-align: center;
+  color: #dbe4ff;
+  font-size: 20px;
+  margin-bottom: 16px;
+  text-shadow: 0 0 12px rgba(120, 160, 255, 0.55);
+}
+/* List */
+.syno-analytics-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.syno-analytics-list li {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #e8eeff;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(120, 160, 255, 0.15);
+}
+/* Fade-In Animation */
+@keyframes synoFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* === Synozän Hotspot Badge === */
+.hotspot-area {
+    position: relative;
+    border: 2px solid rgba(255, 215, 130, 0.45);
+    box-shadow:
+        0 0 15px rgba(255, 215, 130, 0.5),
+        inset 0 0 20px rgba(255, 215, 130, 0.25);
+    border-radius: 18px;
+    transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+/* Badge oben rechts */
+.hotspot-area::after {
+    content: "🔆 Top-Bereich heute";
+    position: absolute;
+    top: -12px;
+    right: 18px;
+    background: rgba(20, 20, 35, 0.9);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: #ffd782;
+    border: 1px solid rgba(255, 215, 130, 0.6);
+    box-shadow: 0 0 10px rgba(255, 215, 130, 0.4);
+    backdrop-filter: blur(6px);
+    font-weight: 500;
+}
+/* Puls Animation – subtil aber sichtbar */
+@keyframes hotspotPulse {
+    0%   { box-shadow: 0 0 15px rgba(255,215,130,0.5); }
+    50%  { box-shadow: 0 0 25px rgba(255,215,130,0.8); }
+    100% { box-shadow: 0 0 15px rgba(255,215,130,0.5); }
+}
+.hotspot-area.active-pulse {
+    animation: hotspotPulse 2.4s infinite ease-in-out;
 }
