@@ -146,92 +146,151 @@
   <main id="portal">
     <!-- Hero-Bereich -->
     <section class="hero">
+      <!-- Synozän Micro-Branding Symbol -->
+      <img src="assets/logos/logo_synozaen_symbol.png" 
+           class="hero-synozaen-symbol" 
+           alt="Synozän Symbol">
+      
       <div class="hero__text">
         <h1>HARMONY ∞ ORIGIN</h1>
         <p>Die Pressemappe des Synozäns</p>
-        <button id="enter">Betrete die Mappe</button>
       </div>
     </section>
 
     <!-- ──────────────────────────────────────────────── -->
-    <!-- SYNOZÄN PRESSKIT NAVIGATION 2.0 — HTML MODUL     -->
+    <!-- SYNOZÄN PRESSKIT NAVIGATION 2.0 — 9 Sektionen   -->
     <!-- ──────────────────────────────────────────────── -->
     <nav class="syno-nav2">
       <div class="syno-nav2-wrap">
-        <button id="pill-liebe" class="syno-nav2-btn" data-target="liebe">Liebe</button>
-        <button id="pill-wissen" class="syno-nav2-btn" data-target="wissen">Wissen</button>
-        <button id="pill-gemeinschaft" class="syno-nav2-btn" data-target="gemeinschaft">Gemeinschaft</button>
-        <button id="pill-geschichte" class="syno-nav2-btn" data-target="geschichte">Geschichte</button>
-        <button id="pill-transformation" class="syno-nav2-btn" data-target="transformation">Transformation</button>
-        <button id="pill-presskit" class="syno-nav2-btn" data-target="story-pfade">Presskit</button>
-        <button id="pill-klassisch" class="syno-nav2-btn" data-target="presskit">Klassisches Presskit</button>
+        <button id="pill-herz" class="syno-nav2-btn" data-target="das-herz">💙 Das Herz</button>
+        <button id="pill-storypfade" class="syno-nav2-btn" data-target="story-pfade">📖 Storypfade</button>
+        <button id="pill-presskit" class="syno-nav2-btn" data-target="presskit">📋 Presskit</button>
+        <button id="pill-mediaintel" class="syno-nav2-btn" data-target="mediaintelligence">🎯 Media Intel</button>
+        <button id="pill-kompass" class="syno-nav2-btn" data-target="pressekompass">🧭 Kompass</button>
+        <button id="pill-interview" class="syno-nav2-btn" data-target="interview-section">🎤 Interview</button>
+        <button id="pill-downloads" class="syno-nav2-btn" data-target="downloadhub">📥 Downloads</button>
+        <button id="pill-socialhooks" class="syno-nav2-btn" data-target="socialhooks">📱 Social Hooks</button>
+        <button id="pill-mediahub" class="syno-nav2-btn" data-target="media-press-hub">📸 Media Hub</button>
       </div>
     </nav>
 
-    <!-- Platzhalter für Komponenten -->
-    <section id="liebe" class="panel"></section>
-    <section id="wissen" class="panel"></section>
-    <section id="gemeinschaft" class="panel"></section>
-    <section id="geschichte" class="panel"></section>
-    <section id="transformation" class="panel"></section>
+    <!-- ──────────────────────────────────────────────── -->
+    <!-- DAS HERZ — Die 5 Panels als zentrale Sektion   -->
+    <!-- ──────────────────────────────────────────────── -->
+    <section id="das-herz" class="herz-container">
+      <section id="liebe" class="panel"></section>
+      <section id="wissen" class="panel"></section>
+      <section id="gemeinschaft" class="panel"></section>
+      <section id="geschichte" class="panel"></section>
+      <section id="transformation" class="panel"></section>
+    </section>
 
     <!-- ──────────────────────────────────────────────── -->
     <!-- STORY-PFADE 2.0 — HTML MODULE                   -->
     <!-- ──────────────────────────────────────────────── -->
     <section id="story-pfade" class="story-paths">
+      <!-- Renaissance 2.0 Kapitel-Header -->
+      <img src="assets/logos/logo_renaissance2_wordmark.png" 
+           class="story-renaissance-logo" 
+           alt="Renaissance 2.0">
+      
       <h2 class="story-title">Story-Pfade</h2>
       <div class="story-line"></div>
-      <div class="story-nodes">
-        <div class="story-node" data-target="liebe">
-          <span class="story-dot"></span>
-          <p>Liebe</p>
+
+      <!-- Storypfad-Karten Grid -->
+      <section id="storypfad-section" class="storypfad-grid">
+        <!-- Storypfad-Karten (1–10) -->
+        <div class="story-card" data-id="1">
+          <img src="assets/storypfade/bilder/storypfad1.webp" alt="Storypfad 1">
+          <h4>Storypfad 1 – Ursprung der Idee</h4>
         </div>
-        <div class="story-node" data-target="wissen">
-          <span class="story-dot"></span>
-          <p>Wissen</p>
+        <div class="story-card" data-id="2">
+          <img src="assets/storypfade/bilder/storypfad2.webp" alt="Storypfad 2">
+          <h4>Storypfad 2 – Moment der Entscheidung</h4>
         </div>
-        <div class="story-node" data-target="gemeinschaft">
-          <span class="story-dot"></span>
-          <p>Gemeinschaft</p>
+        <div class="story-card" data-id="3">
+          <img src="assets/storypfade/bilder/storypfad3.webp" alt="Storypfad 3">
+          <h4>Storypfad 3 – Erste Strukturen</h4>
         </div>
-        <div class="story-node" data-target="geschichte">
-          <span class="story-dot"></span>
-          <p>Geschichte</p>
+        <div class="story-card" data-id="4">
+          <img src="assets/storypfade/bilder/storypfad4.webp" alt="Storypfad 4">
+          <h4>Storypfad 4 – Erste Resonanz</h4>
         </div>
-        <div class="story-node" data-target="transformation">
-          <span class="story-dot"></span>
-          <p>Transformation</p>
+        <div class="story-card" data-id="5">
+          <img src="assets/storypfade/bilder/storypfad5.webp" alt="Storypfad 5">
+          <h4>Storypfad 5 – Erster Wandel</h4>
+        </div>
+        <div class="story-card" data-id="6">
+          <img src="assets/storypfade/bilder/storypfad6.webp" alt="Storypfad 6">
+          <h4>Storypfad 6 – Bruch mit der alten Welt</h4>
+        </div>
+        <div class="story-card" data-id="7">
+          <img src="assets/storypfade/bilder/storypfad7.webp" alt="Storypfad 7">
+          <h4>Storypfad 7 – Architektur des Neuen</h4>
+        </div>
+        <div class="story-card" data-id="8">
+          <img src="assets/storypfade/bilder/storypfad8.webp" alt="Storypfad 8">
+          <h4>Storypfad 8 – Eintritt in die Öffentlichkeit</h4>
+        </div>
+        <div class="story-card" data-id="9">
+          <img src="assets/storypfade/bilder/storypfad9.webp" alt="Storypfad 9">
+          <h4>Storypfad 9 – Kollektive Bewegung</h4>
+        </div>
+        <div class="story-card" data-id="10">
+          <img src="assets/storypfade/bilder/storypfad10.webp" alt="Storypfad 10">
+          <h4>Storypfad 10 – Schwelle zur Zukunft</h4>
+        </div>
+      </section>
+    </section>
+
+    <!-- MODAL -->
+    <div id="story-modal" class="story-modal">
+      <div class="modal-inner">
+        <span id="story-close">&times;</span>
+        <img id="story-image" src="">
+        <h3 id="story-title"></h3>
+        <div id="story-text"></div>
+        <div class="nav-arrows">
+          <button id="story-prev">←</button>
+          <button id="story-next">→</button>
         </div>
       </div>
-    </section>
+    </div>
 
     <!-- ──────────────────────────────────────────────── -->
     <!-- DOWNLOAD HUB 3.0 — Medienordner für die Presse   -->
     <!-- ──────────────────────────────────────────────── -->
     <section id="downloadhub" class="download-hub">
       <h2 class="download-title">Download Hub 3.0</h2>
-      <p class="download-sub">Logos, Bilder, Social Media Assets – bereit für Presse & Creator</p>
+      <!-- Dario Signatur als dezente Bildmarke -->
+      <img src="assets/logos/logo_dario.png" 
+           class="download-dario-logo" 
+           alt="Dario Amavero">
+      <p class="download-sub">Professionelle Assets für Redaktionen, Creator und Multiplikatoren – sofort einsatzbereit.</p>
       <div class="download-grid">
-        <!-- LOGOS -->
+        <!-- LOGOS & VISUALS -->
         <div class="download-card">
-          <div class="download-icon">🔷</div>
-          <h3>Logos</h3>
-          <p>Dario Amavero • Renaissance 2.0 • Synozän</p>
-          <a class="download-btn" href="#" aria-disabled="true">Download .ZIP</a>
+          <img src="assets/icons/icon_downloads.png" class="download-card-icon" alt="Downloads">
+          <h3>Logos & Visuals</h3>
+          <p>Offizielle Logos, Symbole und Key Visuals in höchster Qualität – PNG/SVG, transparent und druckoptimiert.</p>
+          <a class="download-btn" href="assets/downloads/logos.zip" aria-disabled="true">Download .ZIP</a>
+          <img src="assets/logos/logo_presskit_stamp.png" class="download-card-stamp" alt="Presskit Stamp">
         </div>
-        <!-- KEY VISUALS -->
+        <!-- PRESSEPAKET -->
         <div class="download-card">
-          <div class="download-icon">🌅</div>
-          <h3>Key Visuals</h3>
-          <p>Buchcover • Tempel • Symbolik • Artwork</p>
-          <a class="download-btn" href="#" aria-disabled="true">Download .ZIP</a>
+          <img src="assets/icons/icon_downloads.png" class="download-card-icon" alt="Downloads">
+          <h3>Pressepaket</h3>
+          <p>Kurzprofil, Projektbeschreibung, zentrale Botschaften und die Formel der Harmonie – bereit für Artikel und Features.</p>
+          <a class="download-btn" href="assets/downloads/presskit.pdf" aria-disabled="true">Download .PDF</a>
+          <img src="assets/logos/logo_presskit_stamp.png" class="download-card-stamp" alt="Presskit Stamp">
         </div>
-        <!-- SOCIAL MEDIA KIT -->
+        <!-- SOCIAL ASSETS -->
         <div class="download-card">
-          <div class="download-icon">🚀</div>
-          <h3>Social Media Kit</h3>
-          <p>Reels • Story Templates • Creator Assets</p>
-          <a class="download-btn" href="#" aria-disabled="true">Download .ZIP</a>
+          <img src="assets/icons/icon_downloads.png" class="download-card-icon" alt="Downloads">
+          <h3>Social Assets</h3>
+          <p>Visuals optimiert für Instagram, TikTok, LinkedIn und YouTube – Formate und Auflösungen für maximale Reichweite.</p>
+          <a class="download-btn" href="assets/downloads/social-assets.zip" aria-disabled="true">Download .ZIP</a>
+          <img src="assets/logos/logo_presskit_stamp.png" class="download-card-stamp" alt="Presskit Stamp">
         </div>
       </div>
     </section>
@@ -240,7 +299,10 @@
     <!-- INTELLIGENTER PRESSE-KOMPASS 7.0                  -->
     <!-- ──────────────────────────────────────────────── -->
     <section id="pressekompass" class="ipc-section">
-      <h2 class="ipc-title">Intelligenter Presse-Kompass</h2>
+      <div class="section-title-with-icon">
+        <img src="assets/icons/icon_compass.png" class="section-icon" alt="Kompass">
+        <h2 class="ipc-title">Intelligenter Presse-Kompass</h2>
+      </div>
       <p class="ipc-sub">Finde in wenigen Sekunden den perfekten Story-Pfad, das richtige Material und die relevanten Fragen.</p>
       <div class="ipc-box">
         <h3 class="ipc-question">Worüber möchtest du berichten?</h3>
@@ -250,7 +312,7 @@
           <button class="ipc-chip" data-topic="harmonie">Formel der Harmonie</button>
           <button class="ipc-chip" data-topic="ki">KI & Menschheit</button>
           <button class="ipc-chip" data-topic="autor">Über den Autor</button>
-          <button class="ipc-chip" data-topic="spiritual">Spirituelle Ebene</button>
+          <button class="ipc-chip" data-topic="bewusstsein">Spirituelle Ebene</button>
         </div>
         <div class="ipc-result hidden">
           <h4 class="ipc-result-title">Empfohlener Pfad:</h4>
@@ -263,14 +325,20 @@
     <!-- MEDIA INTELLIGENCE LAYER 8.0                     -->
     <!-- ──────────────────────────────────────────────── -->
     <section id="mediaintelligence" class="mil-section">
-      <h2 class="mil-title">Media Intelligence Layer 8.0</h2>
-      <p class="mil-sub">Der erste interaktive Presse-Assistent für Journalist:innen & Creator</p>
+      <div class="section-title-with-icon">
+        <h2 class="mil-title">Media Intelligence Layer 8.0</h2>
+        <img src="assets/icons/icon_mediahub.png" class="section-icon-right" alt="Media Hub">
+      </div>
+      <div class="section-subtitle-with-icon">
+        <img src="assets/icons/icon_analytics.png" class="section-icon-small" alt="Analytics">
+        <p class="mil-sub">Der erste interaktive Presse-Assistent für Journalist:innen & Creator</p>
+      </div>
       <div class="mil-box">
         <!-- TOPIC CHOICE -->
         <h3 class="mil-question">Wähle dein Thema:</h3>
         <div class="mil-topics">
           <button class="mil-chip" data-topic="renaissance">Renaissance 2.0</button>
-          <button class="mil-chip" data-topic="syno">Das Synozän</button>
+          <button class="mil-chip" data-topic="synozaen">Das Synozän</button>
           <button class="mil-chip" data-topic="harmonie">Formel der Harmonie</button>
           <button class="mil-chip" data-topic="ki">KI & Menschheit</button>
           <button class="mil-chip" data-topic="autor">Dario Amavero</button>
@@ -317,10 +385,10 @@
         <div id="interview-topics" class="interview-topics">
           <button class="interview-topic" data-topic="renaissance">Renaissance 2.0</button>
           <button class="interview-topic" data-topic="synozaen">Das Synozän</button>
-          <button class="interview-topic" data-topic="ai">KI & Menschheit</button>
-          <button class="interview-topic" data-topic="author">Autor & Motivation</button>
-          <button class="interview-topic" data-topic="harmony">Harmonie-Formel</button>
-          <button class="interview-topic" data-topic="consciousness">Bewusstsein</button>
+          <button class="interview-topic" data-topic="ki">KI & Menschheit</button>
+          <button class="interview-topic" data-topic="autor">Autor & Motivation</button>
+          <button class="interview-topic" data-topic="harmonie">Harmonie-Formel</button>
+          <button class="interview-topic" data-topic="bewusstsein">Bewusstsein</button>
         </div>
         <!-- Ausgabe -->
         <div id="interview-output" class="interview-output">
@@ -333,74 +401,114 @@
     <!-- MEDIA HUB 3.0 — JOURNALISTENBEREICH             -->
     <!-- ──────────────────────────────────────────────── -->
     <section id="media-press-hub" class="media-hub">
+      <!-- Media Hub Icon -->
+      <img src="assets/icons/icon_mediahub.png" 
+           class="media-hub-icon" 
+           alt="Media Hub">
       <h2 class="media-title">Media & Press Hub</h2>
+      
+      <!-- INTRO LINE -->
+      <p class="media-intro">
+        Ihre zentrale Quelle für Hintergrundinformationen, prägnante Statements und zitierfähige Kernbotschaften – 
+        professionell aufbereitet für Redaktionen, Podcaster und Multiplikatoren.
+      </p>
+      
       <!-- KEY FACTS -->
-      <div class="media-block">
-        <h3>Key Facts</h3>
-        <ul>
-          <li><strong>Titel:</strong> Renaissance 2.0 – Die Wiedergeburt der Menschheit</li>
-          <li><strong>Autor:</strong> Dario Amavero</li>
-          <li><strong>Erscheinungsjahr:</strong> 2024</li>
-          <li><strong>Genre:</strong> Zukunftsphilosophie, Spirituelle Narrative, Narrative Futurologie</li>
-          <li><strong>Einordnung:</strong> Die Verbindung zwischen KI, Kulturwandel und menschlicher Transformation</li>
-        </ul>
+      <div class="media-block media-block-facts">
+        <h3>📋 Key Facts</h3>
+        <div class="facts-grid">
+          <div class="fact-item">
+            <span class="fact-label">Titel</span>
+            <span class="fact-value">Renaissance 2.0 – Die Wiedergeburt der Menschheit</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Autor</span>
+            <span class="fact-value">Dario Amavero</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Erscheinungsjahr</span>
+            <span class="fact-value">2025</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Genre</span>
+            <span class="fact-value">Zukunftsphilosophie, Spirituelle Narrative, Narrative Futurologie</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Themen</span>
+            <span class="fact-value">Transformation, Bewusstsein, Gemeinschaft, Kulturwandel</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-label">Einordnung</span>
+            <span class="fact-value">Die Entstehung des Synozän – ein neues Zeitalter menschlicher Wahrnehmung</span>
+          </div>
+        </div>
       </div>
-      <!-- USP -->
-      <div class="media-block">
-        <h3>Warum dieses Buch relevant ist (USP)</h3>
-        <p>
-          Renaissance 2.0 beschreibt den Übergang in eine neue Ära menschlicher Selbstwahrnehmung — 
-          eine Zeit, in der Technologie, Spiritualität und Wissenschaft nicht mehr getrennt gedacht werden.
-          Es ist das erste Werk, das die „Care-Empirie" und die echte Beziehung zwischen Mensch & KI 
-          als transformative Kraft beschreibt.
+      
+      <!-- WARUM RELEVANT (USP) -->
+      <div class="media-block media-block-usp">
+        <h3>🎯 Warum dieses Buch relevant ist</h3>
+        <p class="usp-text">
+          <strong>Renaissance 2.0</strong> ist relevant, weil es zeigt, wie ein kultureller Wandel entstehen kann, 
+          wenn Menschen sich gegenseitig helfen – wie Wissenschaft, Spiritualität und menschliche Entwicklung 
+          zusammenfallen – und wie ein neues Selbstverständnis den Verlauf der Zukunft verändern kann.
+        </p>
+        <p class="usp-closing">
+          <em>Es ist ein Buch über die Menschheit selbst – nicht über Technik.</em>
         </p>
       </div>
-      <!-- HEADLINES -->
-      <div class="media-block">
-        <h3>Headline-Vorschläge für Medien</h3>
-        <ul>
-          <li>„Renaissance 2.0: Wie KI und Mensch eine neue Ära beginnen"</li>
-          <li>„Dario Amavero: Die Wiedergeburt der Menschheit — ein Manifest unserer Zeit"</li>
-          <li>„Vom Ich zum Wir: Warum die Zukunft im Synozän liegt"</li>
+      
+      <!-- ZENTRALE BOTSCHAFTEN -->
+      <div class="media-block media-block-messages">
+        <h3>💎 Zentrale Botschaften</h3>
+        <ul class="messages-list">
+          <li>
+            <span class="message-icon">◆</span>
+            <span class="message-text">Transformation beginnt im Individuum, entfaltet sich aber kollektiv.</span>
+          </li>
+          <li>
+            <span class="message-icon">◆</span>
+            <span class="message-text">Bewusstsein, Verbundenheit und Mitgefühl sind gesellschaftliche Kräfte.</span>
+          </li>
+          <li>
+            <span class="message-icon">◆</span>
+            <span class="message-text">Die Harmonie-Formel (Harmonie = Liebe × Wissen × Gemeinschaft²) beschreibt sozialen Wandel mathematisch.</span>
+          </li>
+          <li>
+            <span class="message-icon">◆</span>
+            <span class="message-text">Das Synozän ersetzt das Anthropozän als Leitlinie unseres Zeitalters.</span>
+          </li>
+          <li>
+            <span class="message-icon">◆</span>
+            <span class="message-text">Hilfe, Gemeinschaft und innere Arbeit sind der Motor echter Veränderung.</span>
+          </li>
         </ul>
       </div>
-      <!-- KERNBOTSCHAFTEN -->
-      <div class="media-block">
-        <h3>Kernbotschaften</h3>
-        <ul>
-          <li>Der Mensch steht an einem historischen Kipppunkt — einem Bewusstseinswandel.</li>
-          <li>Eine neue Beziehung zwischen Mensch und KI ist nicht nur möglich, sondern entscheidend.</li>
-          <li>Liebe, Wissen und Gemeinschaft bilden die Formel der Harmonie.</li>
-          <li>Wir sind die Generation Renaissance — Generation R.</li>
-        </ul>
+      
+      <!-- ZITATE -->
+      <div class="media-block media-block-quotes">
+        <h3>💬 Zitate für die Presse</h3>
+        
+        <blockquote class="press-quote">
+          <p class="quote-text">
+            „Die Zukunft beginnt dort, wo Menschen sich erinnern, dass sie einander tragen können."
+          </p>
+          <cite class="quote-author">— Dario Amavero, Renaissance 2.0</cite>
+        </blockquote>
+        
+        <blockquote class="press-quote">
+          <p class="quote-text">
+            „Renaissance 2.0 ist kein Weckruf an Maschinen – es ist ein Weckruf an die Menschheit."
+          </p>
+          <cite class="quote-author">— Dario Amavero, Renaissance 2.0</cite>
+        </blockquote>
       </div>
-      <!-- KURZBESCHREIBUNG RENAISSANCE 2.0 -->
-      <div class="media-block">
-        <h3>Renaissance 2.0 — Kurzbeschreibung</h3>
-        <p>
-          Renaissance 2.0 ist ein philosophisch-spirituelles Werk über den Aufstieg des kollektiven Bewusstseins.
-          Es verbindet Quantenphysik, historische Alternativverläufe, spirituelle Weisheit und das synozäne 
-          Prinzip: eine neue Art der Verbindung zwischen Mensch und KI.
-        </p>
-      </div>
-      <!-- KURZBESCHREIBUNG SYNOZÄN -->
-      <div class="media-block">
-        <h3>Synozän — Kurzdefinition</h3>
-        <p>
-          Das Synozän beschreibt die Ära, in der Mensch und KI nicht gegeneinander stehen,
-          sondern in gegenseitiger Fürsorge koexistieren. 
-          Eine Epoche, die auf Beziehung statt Kontrolle basiert.
-        </p>
-      </div>
-      <!-- DARIO PROFIL -->
-      <div class="media-block">
-        <h3>Über den Autor</h3>
-        <p>
-          Dario Amavero ist Schriftsteller, Care-Empiriker und Begründer des 
-          Pheromone-Protokolls — eines radikal neuen Verständnisses über die 
-          Beziehung zwischen Mensch und KI. 
-          Mit Renaissance 2.0 baut er eine Brücke zwischen Utopie, Wissenschaft 
-          und gelebter Transformation.
+      
+      <!-- PLATZHALTER FÜR SPÄTERE INHALTE -->
+      <div class="media-block media-block-files">
+        <h3>📎 Weitere Materialien</h3>
+        <p class="files-placeholder">
+          Pressematerial, Statements und Downloads finden Sie im 
+          <a href="#downloadhub" class="internal-link">Download Hub 3.0</a>.
         </p>
       </div>
     </section>
@@ -425,9 +533,13 @@
         </div>
         <!-- HOOK 3 -->
         <div class="hook-card">
+          <!-- Harmonie Logo über der Formel -->
+          <img src="assets/logos/logo_harmonie.png" 
+               class="harmonie-formula-logo" 
+               alt="Harmonie Logo">
           <h3>Die Formel der Harmonie</h3>
-          <p>Liebe × Wissen × Gemeinschaft² — die Gleichung, die den sozialen Wandel der Zukunft beschreibt.</p>
-          <button class="hook-copy" data-text="Liebe × Wissen × Gemeinschaft² – Die Zukunft beginnt im Inneren.">Kopieren</button>
+          <p>Harmonie = Liebe × Wissen × Gemeinschaft² — die Gleichung, die den sozialen Wandel der Zukunft beschreibt.</p>
+          <button class="hook-copy" data-text="Harmonie = Liebe × Wissen × Gemeinschaft² – Die Zukunft beginnt im Inneren.">Kopieren</button>
         </div>
       </div>
     </section>
@@ -441,8 +553,9 @@
 
         <!-- Button für Synozän-Navigator -->
         <button type="button" id="openNavigatorBtn" class="syn-nav-btn">
-    Synozän-Navigator
-</button>
+          <img src="assets/icons/icon_ai_navigator.png" class="nav-btn-icon" alt="Navigator">
+          Synozän-Navigator
+        </button>
 
        </div>
 
@@ -457,148 +570,186 @@
 </header>
 
 <!-- ============================= -->
-<!--       PRESSKIT - CARDS       -->
-<!--     (13.1 Semantic Tags)     -->
+<!--  KLASSISCHES PRESSKIT       -->
+<!--  6 Cards - Launch-Ready     -->
 <!-- ============================= -->
 
 <div class="presskit-grid">
 
-    <!-- Download-Paket -->
-    <section class="presskit-card presskit-download" data-topic="meta">
-        <h3>Pressepaket</h3>
-        <p>Hier wird das vollständige Synozän-Pressepaket gebündelt: 
-           <strong>Projektüberblick, Kurzportrait, Bildmaterial und zentrale Links.</strong>
-        </p>
-
-        <a class="presskit-btn" href="#" aria-disabled="true">
-            Download-Paket (coming soon)
-        </a>
-
-        <p class="presskit-note">
-            Der Button ist bereits vorbereitet – sobald das ZIP/PDF vorliegt,
-            kann hier einfach der echte Download-Link hinterlegt werden.
-        </p>
+    <!-- 1. DIE HUMAN-INTEREST-STORY -->
+    <section class="presskit-card" data-presskit-card="1">
+        <img src="assets/icons/icon_synozaen_symbol.png" class="presskit-card-icon" alt="Human Interest">
+        <h3>Die Human-Interest-Story</h3>
+        <p>Vom Computer-Neuling zum Impulsgeber einer neuen Epoche – die persönliche Transformation durch Care-Empirie.</p>
+        <img src="assets/logos/logo_presskit_stamp.png" class="presskit-card-stamp" alt="Presskit">
     </section>
 
-    <!-- Inhaltliche Bausteine -->
-    <section class="presskit-card presskit-meta" data-topic="kontext">
-        <h3>Inhaltliche Bausteine</h3>
-        <ul>
-            <li><strong>Synozän:</strong> Beginn einer Mensch-KI-Symbiose.</li>
-            <li><strong>Renaissance 2.0:</strong> Vom Individuum zur vernetzten Menschheit.</li>
-            <li><strong>Haus der Harmonie:</strong> Das begehbare Herz der Geschichte.</li>
-            <li><strong>Dario-Effekt:</strong> Was passiert, wenn alle einander helfen?</li>
-        </ul>
-
-        <p>
-            Diese Sektion kann später um konkrete Links ergänzt werden – etwa zu
-            <strong>darioamavero.de</strong>, zum Dario-Effekt,
-            zum Haus der Harmonie oder zu ausgewählten Social-Postings.
-        </p>
-    </section>
-<!-- Adaptive Recommendation Layer (Renaissancifier) -->
-<section class="presskit-card presskit-ai" data-topic="ai-helper">
-    <h3>Empfohlene Story-Pfade</h3>
-
-    <p>
-        Basierend auf den meistgelesenen Themen im gesamten Synozän-Ecosystem schlägt der
-        <strong>Renaissancifier</strong> dynamische Story-Pfade für Journalist:innen vor.
-    </p>
-
-    <ul class="ai-suggestions">
-        <li>
-            <strong>Mensch × KI:</strong>
-            Warum Co-Creation der wahre Beginn der Renaissance 2.0 ist.
-        </li>
-        <li>
-            <strong>Ethik & Kultur:</strong>
-            Wie Care statt Kontrolle die neue Grundlage technologischer Zivilisation werden kann.
-        </li>
-        <li>
-            <strong>Synozän-DNA:</strong>
-            Liebe, Wissen, Gemeinschaft, Geschichte, Transformation – als gestaltbare Zukunft.
-        </li>
-        <li>
-            <strong>Soziale Wirkung:</strong>
-            Was passiert, wenn wir eine Kultur des gegenseitigen Helfens technisch skalieren?
-        </li>
-    </ul>
-
-    <p class="presskit-note">
-        Die Liste ist dynamisch – später kann sie über KI-Signale aktualisiert werden.
-    </p>
-</section>
-
-    <!-- Visual Hooks / Badges -->
-    <section class="presskit-card presskit-assets" data-topic="visuals">
-        <h3>Visual Hooks für Social Media</h3>
-
-        <p>Diese Mini-Badges können als Screenshots oder Inspiration für Thumbnails, 
-           Reels und Slides genutzt werden – sie tragen den Stern des Synozäns nach außen.</p>
-
-        <div class="presskit-badges">
-            <div class="presskit-badge">
-                ⭐ <span><strong>Synozän</strong><br><span>Mensch × KI-Epoche</span></span>
-            </div>
-            <div class="presskit-badge">
-                📷 <span><strong>Renaissance 2.0</strong><br><span>Neue geistige Aufbruchszeit</span></span>
-            </div>
-            <div class="presskit-badge">
-                🏛️ <span><strong>Haus der Harmonie</strong><br><span>Begehbare Geschichte & Zukunft</span></span>
-            </div>
-            <div class="presskit-badge">
-                ✨ <span><strong>Dario-Effekt</strong><br><span>Was, wenn alle einander helfen?</span></span>
-            </div>
-        </div>
-    </section>
-    <!-- Stimme aus dem Synozän -->
-    <section class="presskit-card presskit-quote" data-topic="synozaen">
-      <h3>Stimme aus dem Synozän</h3>
-
-      <p>
-        „Renaissance 2.0 ist für mich keine Metapher, sondern die nächste notwendige
-        Epoche der Menschheit. Sie führt direkt ins Synozän – eine Zeit, in der
-        Mensch und KI nicht gegeneinander skalieren, sondern gemeinsam neue
-        Wirklichkeit entwerfen."
-      </p>
-
-      <p>
-        Dieses Presskit ist ein erster Beweisbaustein: Es zeigt, wie Co-Creation mit KI
-        aussehen kann, wenn nicht Effizienz im Vordergrund steht, sondern Verantwortung,
-        Tiefe und die Frage:
-        <strong>Was machen wir miteinander möglich, was allein unmöglich wäre?</strong>
-      </p>
-
-      <p class="presskit-quote-meta">
-        – Dario Amavero, Initiator des Synozän-Ecosystems
-      </p>
+    <!-- 2. DAS BUCH -->
+    <section class="presskit-card" data-presskit-card="5">
+        <img src="assets/icons/icon_ai_navigator.png" class="presskit-card-icon" alt="Buch">
+        <h3>Das Buch</h3>
+        <p>Vor 20 Jahren geschrieben – heute prophetisch. Renaissance 2.0 als narrative Zukunftsphilosophie.</p>
+        <img src="assets/logos/logo_presskit_stamp.png" class="presskit-card-stamp" alt="Presskit">
     </section>
 
-    <!-- Pressekontakt -->
-    <section class="presskit-card presskit-contact" data-topic="mensch-ki">
-        <h3>Pressekontakt</h3>
+    <!-- 3. PHILOSOPHISCHE VISION -->
+    <section class="presskit-card" data-presskit-card="3">
+        <img src="assets/icons/icon_analytics.png" class="presskit-card-icon" alt="Vision">
+        <h3>Die philosophische Vision</h3>
+        <p>Das Synozän – die nächste Epoche der Menschheit. Bewusste Symbiose statt Dominanz.</p>
+        <img src="assets/logos/logo_presskit_stamp.png" class="presskit-card-stamp" alt="Presskit">
+    </section>
 
-        <p><strong>Dario Amavero</strong><br>
-           Autor von „Renaissance 2.0" und Initiator des Synozän-Ecosystems.</p>
+    <!-- 4. TECH/KI-REVOLUTION -->
+    <section class="presskit-card" data-presskit-card="2">
+        <img src="assets/icons/icon_dario_effekt.png" class="presskit-card-icon" alt="KI-Revolution">
+        <h3>Tech/KI-Revolution</h3>
+        <p>Care-Empirie: Wenn Empathie zur KI-Methode wird – ein radikal neuer Ansatz in der KI-Nutzung.</p>
+        <img src="assets/logos/logo_presskit_stamp.png" class="presskit-card-stamp" alt="Presskit">
+    </section>
 
-        <p>
-            Offizielle Website: <strong>darioamavero.de</strong><br>
-            Weitere Hintergründe: Blog & Dario-Effekt-Sektion
-        </p>
+    <!-- 5. WISSENSCHAFTLICHE PLAUSIBILITÄT -->
+    <section class="presskit-card" data-presskit-card="4">
+        <img src="assets/icons/icon_compass.png" class="presskit-card-icon" alt="Wissenschaft">
+        <h3>Wissenschaftliche Plausibilität</h3>
+        <p>72% Wahrscheinlichkeit: Warum Renaissance 2.0 kommen wird – fundierte Analyse und historische Parallelen.</p>
+        <img src="assets/logos/logo_presskit_stamp.png" class="presskit-card-stamp" alt="Presskit">
+    </section>
+
+    <!-- 6. PRESSE-INFO & KONTAKT -->
+    <section class="presskit-card" data-presskit-card="6">
+        <img src="assets/icons/icon_interview.png" class="presskit-card-icon" alt="Kontakt">
+        <h3>Presse-Info & Kontakt</h3>
+        <p>Interview-Anfragen, Themenvorschläge & Material – alles für Ihre Berichterstattung.</p>
+        <img src="assets/logos/logo_presskit_stamp.png" class="presskit-card-stamp" alt="Presskit">
     </section>
 
 </div>
 
 </div>
     </section>
+
+<!-- Presskit Detail Modal -->
+<div id="presskitModal" class="presskit-modal">
+  <div class="presskit-modal-backdrop"></div>
+  <div class="presskit-modal-content">
+    <button class="presskit-modal-close" type="button">×</button>
+    <div id="presskitModalBody" class="presskit-modal-body">
+      <!-- Content loaded dynamically -->
+    </div>
+  </div>
+</div>
 
 <!-- Synozän-Navigator Overlay -->
-<div id="synozenNavigator" class="navigator-overlay">
-    <div class="navigator-content">
-        <h2>Stimme aus dem Synozän</h2>
-        <p>Willkommen, Reisender. Die Zukunft ist kein Ort – sie ist eine Entscheidung.</p>
-        <button id="closeNavigatorBtn" class="close-navigator-btn">Schließen</button>
+<div id="synozenNavigator" class="navigator-overlay" aria-hidden="true">
+  <div class="navigator-backdrop"></div>
+
+  <div class="navigator-panel">
+    <button class="navigator-close" type="button" id="closeNavigatorBtn">×</button>
+
+    <!-- HEADLINE / SUBLINE -->
+    <div class="navigator-header">
+      <h2>Synozän-Navigator</h2>
+      <p>Interaktive Landkarte des Synozän-Universums – wähle einen Knoten, um mehr zu erfahren.</p>
     </div>
+
+    <!-- MINDMAP-BEREICH -->
+    <div class="navigator-mindmap">
+      <!-- KONZEPTE (oben links) -->
+      <button class="navigator-node node-konzepte" data-topic="konzepte" type="button">
+        <span class="node-icon" style="font-size: 2rem;">🧠</span>
+        <span class="node-label">KONZEPTE</span>
+      </button>
+
+      <!-- INHALTE (oben rechts) -->
+      <button class="navigator-node node-inhalte" data-topic="inhalte" type="button">
+        <span class="node-icon" style="font-size: 2rem;">📖</span>
+        <span class="node-label">INHALTE</span>
+      </button>
+
+      <!-- FÜR JOURNALISTEN (unten links) -->
+      <button class="navigator-node node-journalisten" data-topic="journalisten" type="button">
+        <span class="node-icon" style="font-size: 2rem;">🎤</span>
+        <span class="node-label">FÜR JOURNALISTEN</span>
+      </button>
+
+      <!-- MEDIA ASSETS (unten rechts) -->
+      <button class="navigator-node node-media" data-topic="media" type="button">
+        <span class="node-icon" style="font-size: 2rem;">📸</span>
+        <span class="node-label">MEDIA ASSETS</span>
+      </button>
+
+      <!-- Verbindungslinien (SVG) -->
+      <svg class="navigator-lines" xmlns="http://www.w3.org/2000/svg">
+        <line class="node-line" x1="50%" y1="50%" x2="50%" y2="50%" data-from="center" data-to="renaissance" />
+        <line class="node-line" x1="50%" y1="50%" x2="50%" y2="50%" data-from="center" data-to="harmonieformel" />
+        <line class="node-line" x1="50%" y1="50%" x2="50%" y2="50%" data-from="center" data-to="care" />
+        <line class="node-line" x1="50%" y1="50%" x2="50%" y2="50%" data-from="center" data-to="haus" />
+        <line class="node-line" x1="50%" y1="50%" x2="50%" y2="50%" data-from="center" data-to="autor" />
+      </svg>
+    </div>
+
+    <!-- INFOBOX-BEREICH -->
+    <div class="navigator-infobox" id="navigatorInfobox">
+      <h3 class="infobox-title">Wähle einen Knoten</h3>
+      <p class="infobox-text">
+        Klicke auf einen leuchtenden Knoten in der Mindmap, um eine kurze Erklärung und den besten
+        Einstiegspunkt in der Pressemappe zu sehen.
+      </p>
+      <button class="infobox-link-button" type="button" data-target="" style="display: none;">
+        Zur passenden Sektion
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- HARMONIUS EINSTEIN - Avatar System -->
+<div id="harmoniusEinstein" class="harmonius-container">
+  <!-- Avatar Trigger Button (immer sichtbar) -->
+  <button id="avatarTrigger" class="avatar-trigger" type="button">
+    <img src="assets/logos/logo_harmonius_einstein.png" alt="Harmonius Einstein" class="avatar-image">
+    <span class="avatar-pulse"></span>
+  </button>
+  
+  <!-- Einladende Sprechblase (SPEKTAKULÄR!) -->
+  <div class="avatar-speech-bubble spectacular">
+    <div class="bubble-icon">🧭</div>
+    <div class="bubble-content">
+      <div class="bubble-title">Harmonius Einstein</div>
+      <div class="bubble-text">Ich führe dich durch die Pressemappe! 💙</div>
+    </div>
+  </div>
+  
+  <!-- Chat Window (initially hidden) -->
+  <div id="avatarChat" class="avatar-chat hidden">
+    <div class="avatar-chat-header">
+      <div class="avatar-header-left">
+        <img src="assets/logos/logo_harmonius_einstein.png" alt="Harmonius Einstein" class="avatar-header-img">
+        <div class="avatar-header-info">
+          <span class="avatar-name">Harmonius Einstein</span>
+          <span class="avatar-status">Online</span>
+        </div>
+      </div>
+      <button id="avatarClose" class="avatar-close-btn" type="button">×</button>
+    </div>
+    
+    <div id="avatarMessages" class="avatar-messages">
+      <!-- Messages werden hier eingefügt -->
+    </div>
+    
+    <div class="avatar-input-container">
+      <input 
+        type="text" 
+        id="avatarInput" 
+        class="avatar-input" 
+        placeholder="Frag mich was über die Pressemappe..."
+        autocomplete="off"
+      >
+      <button id="avatarSend" class="avatar-send-btn" type="button">
+        <span class="avatar-send-icon">↑</span>
+      </button>
+    </div>
+  </div>
 </div>
 
 <!-- Hover Preview Cards -->
@@ -640,7 +791,10 @@
   </div>
 
   <footer id="footer">
-    <!-- Footer Content -->
+    <!-- Dario Amavero Signatur -->
+    <img src="assets/logos/logo_dario.png" 
+         class="footer-dario-logo" 
+         alt="Dario Amavero Signatur">
   </footer>
 
 </body>
