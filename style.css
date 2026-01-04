@@ -3083,6 +3083,11 @@ body.scrolling-calm::after {
     background: rgba(140,170,255,0.25);
     box-shadow: 0 0 18px rgba(140,170,255,0.35);
 }
+.interview-topic.active {
+    transform: translateY(-2px);
+    background: rgba(140,170,255,0.25);
+    box-shadow: 0 0 18px rgba(140,170,255,0.35);
+}
 .interview-output {
     margin-top: 1.4rem;
     padding: 1.4rem 1.2rem;
