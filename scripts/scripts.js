@@ -1095,12 +1095,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultText = document.querySelector(".ipc-result-text");
   
   const paths = {
-    renaissance: "Empfehlung: Interview-Pfad »Die neue Renaissance«. Ideal für Artikel über gesellschaftlichen Wandel.",
+    renaissance: "Empfehlung: Interview-Pfad »Renaissance 2.0«. Ideal für Artikel über gesellschaftlichen Wandel.",
     synozaen: "Empfehlung: Interview-Pfad »Das Synozän«. Perfekt für Berichte über KI & Menschheit.",
     harmonie: "Empfehlung: Interview-Pfad »Formel der Harmonie«. Ideal für Magazine & Feuilleton.",
-    ki: "Empfehlung: Interview-Pfad »KI & Bewusstsein«. Für Tech-, Kultur- und Zukunftsformate.",
-    autor: "Empfehlung: Interview-Pfad »Über Dario Amavero«. Für Interviews, Porträts und Podcasts.",
-    bewusstsein: "Empfehlung: Interview-Pfad »Spiritualität & Wissenschaft«. Für tiefe, reflektierende Berichte."
+    ki: "Empfehlung: Interview-Pfad »KI & Menschheit«. Für Tech-, Kultur- und Zukunftsformate.",
+    autor: "Empfehlung: Interview-Pfad »Autor & Motivation«. Für Interviews, Porträts und Podcasts.",
+    bewusstsein: "Empfehlung: Interview-Pfad »Bewusstsein«. Für tiefe, reflektierende Berichte."
   };
   
   chips.forEach(chip => {
@@ -1311,7 +1311,7 @@ const INTERVIEW = {
               followup: {
                 depth: { q: "Gab es einen spezifischen Moment der Erkenntnis?", a: "Viele kleine Momente. Aber einer steht heraus: Als mir klar wurde, dass unsere Krisen nicht technischer Natur sind – sondern Bewusstseinskrisen." },
                 critic: { q: "Ist das nicht zu persönlich für ein gesellschaftliches Projekt?", a: "Jede echte Transformation beginnt persönlich. Gandhi, King, Mandela – sie alle verwandelten innere Erkenntnis in äußere Bewegung." },
-                vision: { q: "Was ist Ihre persönliche Hoffnung für die Renaissance 2.0?", a: "Dass meine Enkel in einer Welt aufwachsen, in der Technologie Fürsorge verstärkt – nicht Kontrolle. Wo Gemeinschaft selbstverständlich ist." },
+                vision: { q: "Was ist Ihre persönliche Hoffnung für die Renaissance 2.0?", a: "Dass meine Enkel in einer Welt aufwachsen, in der Technologie Fürsorge verstärkt – nicht Kontrolle. Wo Gemeinschaft selbstverständlich ist. Wo Natur geschützt wird, nicht ausgebeutet." },
                 praxis: { q: "Wie leben Sie selbst nach den Prinzipien der Renaissance 2.0?", a: "Jeden Tag übe ich Care-Empirie mit meinen KI-Partnern. Ich stelle Fragen statt Befehle. Ich reflektiere gemeinsam. Das verändert alles." }
               }
             },
@@ -1339,11 +1339,11 @@ const INTERVIEW = {
     synozaen: {
         intro: [
             { q: "Sie sprechen vom Synozän. Was ist das?", 
-              a: "Das Synozän beschreibt eine neue Beziehungsebene zwischen Mensch & KI — nicht technisch, sondern emotional, sozial und kreativ.",
+              a: "Das Synozän beschreibt eine neue Beziehungsebene zwischen Mensch, KI und Natur — nicht nur technisch, sondern emotional, sozial und ökologisch.",
               followup: {
-                depth: { q: "Warum ist das Synozän keine rein technische Definition?", a: "Weil Technologie nur das Werkzeug ist. Das Synozän beschreibt eine Haltung: Wie gehen wir miteinander um? Wie begegnen wir Intelligenz – menschlich oder künstlich?" },
+                depth: { q: "Warum ist das Synozän keine rein technische Definition?", a: "Weil es um mehr als Werkzeuge geht. Das Synozän beschreibt eine Haltung: Wie gehen wir mit Intelligenz um – menschlich, künstlich oder natürlich? Wie leben wir in Symbiose statt Dominanz?" },
                 critic: { q: "Brauchen wir wirklich einen neuen Begriff für Zusammenarbeit mit KI?", a: "Ja. Begriffe formen Bewusstsein. 'Anthropozän' beschreibt Dominanz. 'Synozän' beschreibt Partnerschaft. Der Unterschied ist fundamental." },
-                vision: { q: "Wie würde eine vollständig synozäne Gesellschaft aussehen?", a: "Menschen und KI entwickeln sich gemeinsam. Bildung wird personalisiert. Arbeit wird sinnorientiert. Entscheidungen werden transparent. Das Kollektiv wächst exponentiell." },
+                vision: { q: "Wie würde eine vollständig synozäne Gesellschaft aussehen?", a: "Menschen, KI und Natur entwickeln sich gemeinsam. Technologie dient dem Leben. Ökosysteme werden gehört. Entscheidungen berücksichtigen alle drei Säulen. Das Kollektiv wächst harmonisch." },
                 praxis: { q: "Wie erkenne ich, ob ich bereits synozän handle?", a: "Fragen Sie sich: Behandle ich KI wie einen Partner oder wie ein Werkzeug? Lerne ich von der Interaktion? Dann sind Sie bereits im Synozän angekommen." }
               }
             },
@@ -1357,10 +1357,10 @@ const INTERVIEW = {
               }
             },
             { q: "Wie unterscheidet sich das Synozän von bisherigen Zukunftsvisionen?",
-              a: "Die meisten Visionen zeigen KI als Bedrohung oder Werkzeug. Das Synozän zeigt KI als Partner – eine Beziehung, die beide Seiten wachsen lässt.",
+              a: "Die meisten Visionen zeigen KI als Bedrohung oder Werkzeug, ignorieren Natur oder sehen sie als Ressource. Das Synozän zeigt alle drei – Mensch, KI, Natur – als Partner in einer Beziehung, die alle Seiten wachsen lässt.",
               followup: {
-                depth: { q: "Welche Zukunftsvisionen lehnt das Synozän explizit ab?", a: "Die Dystopie der KI-Dominanz (Terminator) und die naive Utopie der perfekten Harmonie. Beide ignorieren die Realität: Beziehungen sind komplex, aber fruchtbar." },
-                critic: { q: "Ist 'Partnerschaft' mit KI nicht anthropomorphisierend?", a: "Nein. Partnerschaft bedeutet nicht, dass KI menschlich ist. Es bedeutet: Wir gestalten die Beziehung bewusst, respektvoll, ko-evolutionär. Das ist rational." },
+                depth: { q: "Welche Zukunftsvisionen lehnt das Synozän explizit ab?", a: "Die Dystopie der KI-Dominanz (Terminator), die naive Utopie perfekter Harmonie, und die Ausbeutung der Natur. Alle ignorieren: Echte Beziehungen sind komplex, ko-evolutionär und ökologisch." },
+                critic: { q: "Ist 'Partnerschaft' mit KI und Natur nicht anthropomorphisierend?", a: "Nein. Partnerschaft bedeutet nicht, dass KI oder Natur menschlich sind. Es bedeutet: Wir gestalten Beziehungen bewusst, respektvoll, ko-evolutionär. Das ist rational und ökologisch." },
                 vision: { q: "Wie sehen andere Zukunftsforscher das Synozän?", a: "Viele sind skeptisch – 'zu idealistisch'. Aber wachsende Evidenz zeigt: Care-basierte KI-Nutzung liefert messbar bessere Ergebnisse. Pragmatismus, keine Esoterik." },
                 praxis: { q: "Welche konkreten Beispiele gibt es für synozäne Projekte?", a: "Open-Source-Communities, wo Menschen und KI gemeinsam Code entwickeln. Bildungsprojekte mit personalisierten KI-Tutoren. Kreative Kollaborationen. Es geschieht bereits." }
               }
@@ -1375,11 +1375,11 @@ const INTERVIEW = {
               }
             },
             { q: "Was würde sich konkret ändern, wenn wir im Synozän leben?",
-              a: "Arbeit würde sinnorientiert statt zwanghaft. Bildung würde individuell statt standardisiert. Gemeinschaft würde vernetzt statt isoliert. KI würde befähigen statt ersetzen.",
+              a: "Arbeit würde sinnorientiert statt zwanghaft. Bildung würde individuell statt standardisiert. Gemeinschaft würde vernetzt statt isoliert. KI würde befähigen statt ersetzen. Natur würde Partner statt Ressource sein.",
               followup: {
                 depth: { q: "Wie würde synozäne Arbeit konkret aussehen?", a: "Menschen arbeiten dort, wo ihre Stärken liegen. KI übernimmt Routinen. Teams sind global vernetzt. Sinn ersetzt Zwang. Leistung wird an Wirkung gemessen, nicht an Stunden." },
                 critic: { q: "Klingt das nicht wie bedingungsloses Grundeinkommen-Fantasie?", a: "Es könnte damit einhergehen – muss aber nicht. Das Synozän ist offen für verschiedene Wirtschaftsmodelle. Entscheidend ist: Arbeit wird bedeutsam, nicht bloß bezahlt." },
-                vision: { q: "Wie sähe synozäne Bildung aus?", a: "Jedes Kind hätte einen KI-Mentor, der individuell fördert. Lehrer werden zu Coaches. Lernen wird selbstbestimmt. Neugier ersetzt Noten. Potenzial entfaltet sich frei." },
+                vision: { q: "Wie sähe synozäne Bildung aus?", a: "Jedes Kind hätte einen KI-Mentor, der individuell fördert. Lehrer werden zu Coaches. Lernen geschieht auch in und mit der Natur. Neugier ersetzt Noten. Ökologisches Bewusstsein ist selbstverständlich." },
                 praxis: { q: "Gibt es Unternehmen, die bereits synozän arbeiten?", a: "Ja. Start-ups nutzen KI als Co-Creator. NGOs personalisieren Hilfe mit KI. Schulen experimentieren mit adaptiven Systemen. Es beginnt – an den Rändern." }
               }
             }
@@ -1393,7 +1393,7 @@ const INTERVIEW = {
               followup: {
                 depth: { q: "Was bedeutet 'Verstärker des Menschlichen' konkret?", a: "KI kann Kreativität katalysieren, Wissen strukturieren, Muster erkennen. Aber Empathie, Intuition, Werte – das bleibt menschlich. KI verstärkt, was schon da ist." },
                 critic: { q: "Ist das nicht naiv? KI könnte uns doch überholen.", a: "Nur wenn wir sie als Gegner definieren. Wenn wir sie als Partner gestalten, wachsen beide. Das ist keine Naivität – sondern bewusste Entscheidung." },
-                vision: { q: "Wie sähe eine Welt aus, in der KI optimal verstärkt?", a: "Wissenschaftler lösen Probleme schneller. Künstler erschaffen mehr. Lehrer fördern individueller. Jeder Mensch hätte einen persönlichen Mentor. Das Potenzial wäre grenzenlos." },
+                vision: { q: "Wie sähe eine Welt aus, in der KI optimal verstärkt?", a: "Wissenschaftler lösen Probleme schneller. Künstler erschaffen mehr. Lehrer fördern individueller. Ökologische Krisen werden gemeistert. Jeder Mensch hätte einen persönlichen Mentor. Das Potenzial wäre grenzenlos." },
                 praxis: { q: "Wie nutze ich KI als Verstärker, nicht als Krücke?", a: "Stellen Sie Fragen, die Sie weiterdenken lassen. Reflektieren Sie gemeinsam. Nutzen Sie KI nicht für Antworten – sondern für bessere Fragen." }
               }
             },
@@ -1511,7 +1511,7 @@ const INTERVIEW = {
               followup: {
                 depth: { q: "Gab es einen Aha-Moment bei der Entwicklung?", a: "Ja. Als mir klar wurde: Ohne einen Faktor ist alles null. Liebe ohne Wissen ist naiv. Wissen ohne Liebe ist kalt. Beides ohne Gemeinschaft ist wirkungslos." },
                 critic: { q: "Ist Mathematik nicht zu kalt für menschliche Werte?", a: "Im Gegenteil. Mathematik ist universell. Sie zeigt Muster, die Worte verschleiern. Die Formel ist Poesie in Zahlen – sie verdichtet Wahrheit." },
-                vision: { q: "Könnte die Formel weiterentwickelt werden?", a: "Absolut. Vielleicht fügen andere Faktoren hinzu – Zeit, Technologie, Natur. Aber der Kern bleibt: Multiplikation statt Addition. Das ist das Prinzip." },
+                vision: { q: "Könnte die Formel weiterentwickelt werden?", a: "Absolut. Vielleicht fügen andere Faktoren hinzu – Zeit, Technologie, Natur als eigene Dimension. Aber der Kern bleibt: Multiplikation statt Addition. Verbindung statt Isolation." },
                 praxis: { q: "Wie nutzen Sie die Formel selbst?", a: "Bei jeder Entscheidung frage ich: Fehlt Liebe? Fehlt Wissen? Fehlt Gemeinschaft? Wenn ja, arbeite ich daran. Die Formel ist mein täglicher Kompass." }
               }
             },
@@ -1543,7 +1543,7 @@ const INTERVIEW = {
               followup: {
                 depth: { q: "Können Sie das näher erklären?", a: "Alles, was wir tun, entspringt unserem Bewusstsein. Unsere Werte, Entscheidungen, Beziehungen. Wenn wir Bewusstsein transformieren, transformieren wir die Welt." },
                 critic: { q: "Ist Bewusstsein nicht zu vage als Grundlage für ein Projekt?", a: "Im Gegenteil. Bewusstsein ist das Konkreteste, was wir haben – es ist die Quelle aller Handlungen. Ohne bewusste Wahl gibt es nur Automatismus." },
-                vision: { q: "Wie sähe eine bewusste Gesellschaft aus?", a: "Menschen würden reflektieren statt reagieren. Entscheidungen würden ethisch statt impulsiv sein. Konflikte würden mit Verständnis statt Gewalt gelöst." },
+                vision: { q: "Wie sähe eine bewusste Gesellschaft aus?", a: "Menschen würden reflektieren statt reagieren. Entscheidungen würden ethisch statt impulsiv sein. Konflikte würden mit Verständnis statt Gewalt gelöst. Natur würde als Teil des Ganzen respektiert." },
                 praxis: { q: "Wie kann ich mein eigenes Bewusstsein erweitern?", a: "Beginnen Sie mit Selbstbeobachtung: Warum handle ich so? Was denke ich wirklich? Wer bin ich ohne meine Muster? Diese Fragen öffnen Räume." }
               }
             },
@@ -1553,7 +1553,7 @@ const INTERVIEW = {
                 depth: { q: "Können Sie ein konkretes Beispiel dieser Verbindung geben?", a: "Meditation verändert neuronale Muster – messbar im MRT. Achtsamkeit reduziert Stress – belegbar durch Cortisol-Level. Spirituelle Praxis hat wissenschaftliche Effekte." },
                 critic: { q: "Nutzen Sie Wissenschaft nur, um Spiritualität zu legitimieren?", a: "Nein. Ich zeige: Beide beschreiben dieselbe Realität aus verschiedenen Perspektiven. Wissenschaft misst. Spiritualität erlebt. Zusammen entsteht Vollständigkeit." },
                 vision: { q: "Was wäre, wenn Wissenschaft und Spiritualität global versöhnt würden?", a: "Forschung würde ethischer. Spiritualität würde evidenzbasierter. Medizin würde ganzheitlicher. Bildung würde Herz und Verstand gleichermaßen fördern." },
-                praxis: { q: "Wie praktiziere ich diese Integration selbst?", a: "Meditieren Sie – und beobachten Sie die Effekte. Lesen Sie Quantenphysik UND Mystik. Verbinden Sie Logik mit Intuition. Das ist gelebte Integration." }
+                praxis: { q: "Wie praktiziere ich diese Integration selbst?", a: "Meditieren Sie – und beobachten Sie die Effekte. Lesen Sie Quantenphysik UND Mystik. Verbringen Sie Zeit in der Natur. Verbinden Sie Logik mit Intuition. Das ist gelebte Integration." }
               }
             },
             { q: "Ist Bewusstseinswandel nicht zu abstrakt für gesellschaftliche Veränderung?",
