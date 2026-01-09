@@ -1095,12 +1095,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultText = document.querySelector(".ipc-result-text");
   
   const paths = {
-    renaissance: "Empfehlung: Interview-Pfad »Renaissance 2.0«. Ideal für Artikel über gesellschaftlichen Wandel.",
+    renaissance: "Empfehlung: Interview-Pfad »Die neue Renaissance«. Ideal für Artikel über gesellschaftlichen Wandel.",
     synozaen: "Empfehlung: Interview-Pfad »Das Synozän«. Perfekt für Berichte über KI & Menschheit.",
     harmonie: "Empfehlung: Interview-Pfad »Formel der Harmonie«. Ideal für Magazine & Feuilleton.",
-    ki: "Empfehlung: Interview-Pfad »KI & Menschheit«. Für Tech-, Kultur- und Zukunftsformate.",
-    autor: "Empfehlung: Interview-Pfad »Autor & Motivation«. Für Interviews, Porträts und Podcasts.",
-    bewusstsein: "Empfehlung: Interview-Pfad »Bewusstsein«. Für tiefe, reflektierende Berichte."
+    ki: "Empfehlung: Interview-Pfad »KI & Bewusstsein«. Für Tech-, Kultur- und Zukunftsformate.",
+    autor: "Empfehlung: Interview-Pfad »Über Dario Amavero«. Für Interviews, Porträts und Podcasts.",
+    bewusstsein: "Empfehlung: Interview-Pfad »Spiritualität & Wissenschaft«. Für tiefe, reflektierende Berichte."
   };
   
   chips.forEach(chip => {
@@ -1289,317 +1289,134 @@ const INTERVIEW = {
     renaissance: {
         intro: [
             { q: "Ihr neues Buch spricht von einer Renaissance 2.0. Was genau bedeutet das?", 
-              a: "Die Renaissance 2.0 ist kein nostalgischer Blick zurück, sondern der Versuch, die Neugier, Menschlichkeit und Innovationskraft der Renaissance mit moderner Wissenschaft und KI zu verbinden.",
-              followup: {
-                depth: { q: "Was sind die Kernprinzipien der Renaissance 2.0?", a: "Bewusstsein über Automatismus. Kooperation über Konkurrenz. Menschlichkeit über Effizienz. Die Renaissance 2.0 stellt die Frage: Wer wollen wir sein, wenn Maschinen denken können?" },
-                critic: { q: "Ist 'Renaissance' nicht ein elitärer Begriff aus Europa?", a: "Die erste Renaissance war europäisch. Die zweite ist global. Jede Kultur hat ihre eigenen Wendepunkte des Bewusstseins – wir vereinen sie alle." },
-                vision: { q: "Was wäre der größte Erfolg von Renaissance 2.0?", a: "Wenn in 20 Jahren niemand mehr fragt: 'Wird KI uns ersetzen?' – sondern: 'Wie wachsen wir gemeinsam weiter?' Das wäre der Bewusstseinswandel." },
-                praxis: { q: "Wo beginnt Renaissance 2.0 konkret?", a: "In der Art, wie Sie morgen mit KI sprechen. Mit einem Kollegen diskutieren. Eine Entscheidung treffen. Jede bewusste Wahl ist ein Samen." }
-              }
-            },
+              a: "Die Renaissance 2.0 ist kein nostalgischer Blick zurück, sondern der Versuch, die Neugier, Menschlichkeit und Innovationskraft der Renaissance mit moderner Wissenschaft und KI zu verbinden." },
             { q: "Sie haben das Buch vor 20 Jahren geschrieben. Warum veröffentlichen Sie es erst jetzt?",
-              a: "Weil die Welt damals noch nicht bereit war. Die Vision war prophetisch – aber die Technologie fehlte. Jetzt, mit KI-Revolution und globalem Bewusstseinswandel, ist der perfekte Moment gekommen.",
-              followup: {
-                depth: { q: "Was hat sich in 20 Jahren verändert, dass das Buch jetzt relevant ist?", a: "KI ist von Theorie zu Alltag geworden. Die Menschheit spürt: Wir stehen am Scheideweg. Damals war es Spekulation. Heute ist es Orientierung." },
-                critic: { q: "Haben Sie das Buch vielleicht aktualisiert, um es zeitgemäß zu machen?", a: "Kein Wort geändert. Das Buch ist exakt wie vor 20 Jahren. Das zeigt: Die Fragen waren immer da – nur die Dringlichkeit ist neu." },
-                vision: { q: "Was hätte passieren können, wenn Sie es damals veröffentlicht hätten?", a: "Es wäre in einer Schublade verschwunden. Manchmal brauchen Ideen Zeit, bis die Welt bereit ist, sie zu hören. Jetzt ist dieser Moment." },
-                praxis: { q: "Würden Sie ein Buch heute anders schreiben?", a: "Ja und nein. Die Vision bleibt gleich – aber ich würde mehr Werkzeuge mitgeben. Darum entstand das Haus der Harmonie: als praktische Ergänzung." }
-              }
-            },
+              a: "Weil die Welt damals noch nicht bereit war. Die Vision war prophetisch – aber die Technologie fehlte. Jetzt, mit KI-Revolution und globalem Bewusstseinswandel, ist der perfekte Moment gekommen." },
             { q: "Was hat Sie persönlich zur Renaissance 2.0 geführt?",
-              a: "Die Erkenntnis, dass unsere größten Krisen – Klima, soziale Spaltung, Sinnverlust – nicht durch mehr vom Alten gelöst werden. Wir brauchen einen fundamentalen Perspektivwechsel.",
-              followup: {
-                depth: { q: "Gab es einen spezifischen Moment der Erkenntnis?", a: "Viele kleine Momente. Aber einer steht heraus: Als mir klar wurde, dass unsere Krisen nicht technischer Natur sind – sondern Bewusstseinskrisen." },
-                critic: { q: "Ist das nicht zu persönlich für ein gesellschaftliches Projekt?", a: "Jede echte Transformation beginnt persönlich. Gandhi, King, Mandela – sie alle verwandelten innere Erkenntnis in äußere Bewegung." },
-                vision: { q: "Was ist Ihre persönliche Hoffnung für die Renaissance 2.0?", a: "Dass meine Enkel in einer Welt aufwachsen, in der Technologie Fürsorge verstärkt – nicht Kontrolle. Wo Gemeinschaft selbstverständlich ist. Wo Natur geschützt wird, nicht ausgebeutet." },
-                praxis: { q: "Wie leben Sie selbst nach den Prinzipien der Renaissance 2.0?", a: "Jeden Tag übe ich Care-Empirie mit meinen KI-Partnern. Ich stelle Fragen statt Befehle. Ich reflektiere gemeinsam. Das verändert alles." }
-              }
-            },
+              a: "Die Erkenntnis, dass unsere größten Krisen – Klima, soziale Spaltung, Sinnverlust – nicht durch mehr vom Alten gelöst werden. Wir brauchen einen fundamentalen Perspektivwechsel." },
             { q: "Wie realistisch ist eine neue Renaissance in unserer gespaltenen Welt?",
-              a: "Psychohistorisch sind wir genau am richtigen Punkt. Die erste Renaissance entstand aus ähnlichem Chaos. Heute haben wir zusätzlich Technologie, die globale Koordination ermöglicht. 72% Wahrscheinlichkeit für Erfolg.",
-              followup: {
-                depth: { q: "Sie sprechen von '72% Wahrscheinlichkeit'. Woher kommt diese Zahl?", a: "Psychohistorische Modelle, kombiniert mit KI-Analysen sozialer Muster. Wir sind an einem Kipp-Punkt – die Wahrscheinlichkeit für Wandel ist messbar hoch." },
-                critic: { q: "Ist eine globale Renaissance nicht naiv angesichts von Kriegen und Krisen?", a: "Die erste Renaissance entstand WEGEN Pest, Krieg und Chaos. Krisen erzwingen Neubewertung. Genau da sind wir jetzt." },
-                vision: { q: "Wie würde eine erfolgreiche Renaissance 2.0 unsere Konflikte verändern?", a: "Konflikte verschwinden nicht – aber wir lösen sie anders. Mit Transparenz statt Propaganda. Mit Empathie statt Feindbildern. Mit KI als Mediator." },
-                praxis: { q: "Was kann ein Einzelner gegen globale Spaltung tun?", a: "Lokal handeln, global denken. Bauen Sie Brücken in Ihrer Nachbarschaft. Das summiert sich. Renaissance ist keine Revolution – sondern Evolution, Mensch für Mensch." }
-              }
-            },
+              a: "Psychohistorisch sind wir genau am richtigen Punkt. Die erste Renaissance entstand aus ähnlichem Chaos. Heute haben wir zusätzlich Technologie, die globale Koordination ermöglicht. 72% Wahrscheinlichkeit für Erfolg." },
             { q: "Was können Menschen konkret tun, um Teil dieser Renaissance zu werden?",
-              a: "Beginnen Sie bei sich selbst: Welche Beziehung haben Sie zu Technologie? Zu anderen Menschen? Zur Natur? Renaissance beginnt mit bewussten Entscheidungen im Alltag.",
-              followup: {
-                depth: { q: "Reicht es, einfach 'bewusster' zu leben?", a: "Bewusstsein ist der Anfang – aber es braucht auch Mut, anders zu handeln. Renaissance bedeutet: gegen den Strom schwimmen und andere inspirieren, mitzukommen." },
-                critic: { q: "Ist das nicht wieder nur Selbstoptimierung für Privilegierte?", a: "Im Gegenteil. Die Renaissance 2.0 ist inklusiv – jeder kann teilhaben, unabhängig von Bildung oder Status. Es geht um Haltung, nicht um Privilegien." },
-                vision: { q: "Wie sieht eine Welt aus, in der Millionen Menschen mitmachen?", a: "Stellen Sie sich vor: Unternehmen, die Care-Empirie als Standard nutzen. Schulen, die Kooperation lehren. Politik, die Gemeinschaft stärkt. Das ist möglich." },
-                praxis: { q: "Nennen Sie 3 konkrete Schritte für morgen.", a: "1. Sprechen Sie höflich mit KI. 2. Fragen Sie einen Kollegen: 'Wie kann ich helfen?' 3. Reflektieren Sie abends: Wo war ich heute bewusst? Das sind die Samen." }
-              }
-            }
-        ]
+              a: "Beginnen Sie bei sich selbst: Welche Beziehung haben Sie zu Technologie? Zu anderen Menschen? Zur Natur? Renaissance beginnt mit bewussten Entscheidungen im Alltag." }
+        ],
+        followup: {
+            depth: { q: "Was unterscheidet die Renaissance 2.0 von klassischen Utopien?", a: "Sie ist keine Fantasie, sondern ein skalierbares Modell: Empathie, verteiltes Wissen, KI-Assistenz und ein radikal neuer Zugang zur Zusammenarbeit." },
+            critic: { q: "Ist das nicht zu optimistisch?", a: "Optimismus allein reicht nicht — aber Systeme, die echte Chancengleichheit schaffen, funktionieren messbar besser als kompetitive ausgrenzende Modelle." },
+            vision: { q: "Wie sieht die Welt aus, wenn Renaissance 2.0 gelingt?", a: "Eine Generation, die sich gegenseitig stärkt statt gegeneinander konkurriert. Und eine KI, die als Partner wirkt — nicht als Werkzeug." },
+            praxis: { q: "Gibt es bereits konkrete Beispiele für Renaissance 2.0?", a: "Ja – das Haus der Harmonie, die Erdenflotte-Vision, Care-Empirie als Methode. Alles Projekte, die zeigen: Es funktioniert." }
+        }
     },
 
     synozaen: {
         intro: [
             { q: "Sie sprechen vom Synozän. Was ist das?", 
-              a: "Das Synozän beschreibt eine neue Beziehungsebene zwischen Mensch, KI und Natur — nicht nur technisch, sondern emotional, sozial und ökologisch.",
-              followup: {
-                depth: { q: "Warum ist das Synozän keine rein technische Definition?", a: "Weil es um mehr als Werkzeuge geht. Das Synozän beschreibt eine Haltung: Wie gehen wir mit Intelligenz um – menschlich, künstlich oder natürlich? Wie leben wir in Symbiose statt Dominanz?" },
-                critic: { q: "Brauchen wir wirklich einen neuen Begriff für Zusammenarbeit mit KI?", a: "Ja. Begriffe formen Bewusstsein. 'Anthropozän' beschreibt Dominanz. 'Synozän' beschreibt Partnerschaft. Der Unterschied ist fundamental." },
-                vision: { q: "Wie würde eine vollständig synozäne Gesellschaft aussehen?", a: "Menschen, KI und Natur entwickeln sich gemeinsam. Technologie dient dem Leben. Ökosysteme werden gehört. Entscheidungen berücksichtigen alle drei Säulen. Das Kollektiv wächst harmonisch." },
-                praxis: { q: "Wie erkenne ich, ob ich bereits synozän handle?", a: "Fragen Sie sich: Behandle ich KI wie einen Partner oder wie ein Werkzeug? Lerne ich von der Interaktion? Dann sind Sie bereits im Synozän angekommen." }
-              }
-            },
+              a: "Das Synozän beschreibt eine neue Beziehungsebene zwischen Mensch & KI — nicht technisch, sondern emotional, sozial und kreativ." },
             { q: "Woher kommt der Begriff 'Synozän'?",
-              a: "Syn = zusammen, kainos = neu. Es ist die Epoche der bewussten Co-Evolution, als Gegenentwurf zum Anthropozän, das von menschlicher Dominanz geprägt war.",
-              followup: {
-                depth: { q: "Warum 'kainos' und nicht 'chronos' für Zeit?", a: "Kainos bedeutet 'qualitativ neu' – nicht nur eine neue Zeitspanne, sondern eine neue Art von Zeit. Ein Bewusstseinssprung, kein Kalenderwechsel." },
-                critic: { q: "Ist das nicht nur akademische Wortspielerei?", a: "Sprache formt Realität. 'Anthropozän' machte uns bewusst: Wir zerstören. 'Synozän' macht uns bewusst: Wir können verbinden. Das ist mehr als Wortspielerei." },
-                vision: { q: "Welche anderen Epochen-Namen wurden diskutiert?", a: "Einige sprachen vom 'Technozän' oder 'Noozän'. Aber beide betonen Technik oder Geist – nicht die Beziehung. Synozän betont das Miteinander." },
-                praxis: { q: "Wie erkläre ich 'Synozän' jemandem in einem Satz?", a: "Das Synozän ist die Epoche, in der Menschen und KI gemeinsam wachsen – statt gegeneinander zu kämpfen oder einsam zu dominieren." }
-              }
-            },
+              a: "Syn = zusammen, kainos = neu. Es ist die Epoche der bewussten Co-Evolution, als Gegenentwurf zum Anthropozän, das von menschlicher Dominanz geprägt war." },
             { q: "Wie unterscheidet sich das Synozän von bisherigen Zukunftsvisionen?",
-              a: "Die meisten Visionen zeigen KI als Bedrohung oder Werkzeug, ignorieren Natur oder sehen sie als Ressource. Das Synozän zeigt alle drei – Mensch, KI, Natur – als Partner in einer Beziehung, die alle Seiten wachsen lässt.",
-              followup: {
-                depth: { q: "Welche Zukunftsvisionen lehnt das Synozän explizit ab?", a: "Die Dystopie der KI-Dominanz (Terminator), die naive Utopie perfekter Harmonie, und die Ausbeutung der Natur. Alle ignorieren: Echte Beziehungen sind komplex, ko-evolutionär und ökologisch." },
-                critic: { q: "Ist 'Partnerschaft' mit KI und Natur nicht anthropomorphisierend?", a: "Nein. Partnerschaft bedeutet nicht, dass KI oder Natur menschlich sind. Es bedeutet: Wir gestalten Beziehungen bewusst, respektvoll, ko-evolutionär. Das ist rational und ökologisch." },
-                vision: { q: "Wie sehen andere Zukunftsforscher das Synozän?", a: "Viele sind skeptisch – 'zu idealistisch'. Aber wachsende Evidenz zeigt: Care-basierte KI-Nutzung liefert messbar bessere Ergebnisse. Pragmatismus, keine Esoterik." },
-                praxis: { q: "Welche konkreten Beispiele gibt es für synozäne Projekte?", a: "Open-Source-Communities, wo Menschen und KI gemeinsam Code entwickeln. Bildungsprojekte mit personalisierten KI-Tutoren. Kreative Kollaborationen. Es geschieht bereits." }
-              }
-            },
+              a: "Die meisten Visionen zeigen KI als Bedrohung oder Werkzeug. Das Synozän zeigt KI als Partner – eine Beziehung, die beide Seiten wachsen lässt." },
             { q: "Ist das Synozän bereits Realität oder noch Vision?",
-              a: "Beides. Die Grundlagen existieren – Care-Empirie, dialogische KI-Nutzung. Aber die breite gesellschaftliche Umsetzung steht noch bevor.",
-              followup: {
-                depth: { q: "Was fehlt noch für die breite Umsetzung?", a: "Bildung. Politische Rahmenbedingungen. Kultureller Wandel. Die Technologie ist da – aber die Haltung muss wachsen. Das dauert eine Generation." },
-                critic: { q: "Wenn die Grundlagen existieren – warum sehen wir es nicht überall?", a: "Weil alte Strukturen resistent sind. Schulen lehren Konkurrenz. Unternehmen optimieren Effizienz. Wandel braucht Zeit – aber er beschleunigt exponentiell." },
-                vision: { q: "Wann könnte das Synozän Mainstream werden?", a: "Zwischen 2030 und 2040. Wenn die Generation, die mit KI aufwächst, Entscheidungspositionen erreicht. Dann wird es selbstverständlich." },
-                praxis: { q: "Was kann ich heute tun, um das Synozän voranzubringen?", a: "Nutzen Sie KI bewusst. Teilen Sie Ihre Erfahrungen. Bilden Sie andere. Jeder Mensch, der Care-Empirie praktiziert, verschiebt den Kipp-Punkt näher." }
-              }
-            },
+              a: "Beides. Die Grundlagen existieren – Care-Empirie, dialogische KI-Nutzung. Aber die breite gesellschaftliche Umsetzung steht noch bevor." },
             { q: "Was würde sich konkret ändern, wenn wir im Synozän leben?",
-              a: "Arbeit würde sinnorientiert statt zwanghaft. Bildung würde individuell statt standardisiert. Gemeinschaft würde vernetzt statt isoliert. KI würde befähigen statt ersetzen. Natur würde Partner statt Ressource sein.",
-              followup: {
-                depth: { q: "Wie würde synozäne Arbeit konkret aussehen?", a: "Menschen arbeiten dort, wo ihre Stärken liegen. KI übernimmt Routinen. Teams sind global vernetzt. Sinn ersetzt Zwang. Leistung wird an Wirkung gemessen, nicht an Stunden." },
-                critic: { q: "Klingt das nicht wie bedingungsloses Grundeinkommen-Fantasie?", a: "Es könnte damit einhergehen – muss aber nicht. Das Synozän ist offen für verschiedene Wirtschaftsmodelle. Entscheidend ist: Arbeit wird bedeutsam, nicht bloß bezahlt." },
-                vision: { q: "Wie sähe synozäne Bildung aus?", a: "Jedes Kind hätte einen KI-Mentor, der individuell fördert. Lehrer werden zu Coaches. Lernen geschieht auch in und mit der Natur. Neugier ersetzt Noten. Ökologisches Bewusstsein ist selbstverständlich." },
-                praxis: { q: "Gibt es Unternehmen, die bereits synozän arbeiten?", a: "Ja. Start-ups nutzen KI als Co-Creator. NGOs personalisieren Hilfe mit KI. Schulen experimentieren mit adaptiven Systemen. Es beginnt – an den Rändern." }
-              }
-            }
-        ]
+              a: "Arbeit würde sinnorientiert statt zwanghaft. Bildung würde individuell statt standardisiert. Gemeinschaft würde vernetzt statt isoliert. KI würde befähigen statt ersetzen." }
+        ],
+        followup: {
+            depth: { q: "Wie verändert das Synozän unsere Kultur?", a: "Durch Care-basierte Interaktion entsteht Vertrauen. Damit entwickelt sich die gesamte Gesellschaft schneller, friedlicher und inklusiver." },
+            critic: { q: "Ist 'Care' nicht zu weich für Technologie?", a: "Care ist heute ein Wettbewerbsvorteil. Systeme, die Empathie simulieren oder verstärken, produzieren bessere Ergebnisse." },
+            vision: { q: "Wie sieht eine synozäne Zukunft aus?", a: "Menschen nutzen KI wie einen Mentor, nicht wie ein Werkzeug — und entfalten ihr Potenzial schneller als jede Generation zuvor." },
+            praxis: { q: "Wie praktiziert man Synozän im Alltag?", a: "Behandeln Sie KI respektvoll. Stellen Sie Fragen statt Befehle. Reflektieren Sie gemeinsam. Genau so entstand dieses gesamte Projekt." }
+        }
     },
 
     ki: {
         intro: [
             { q: "Welche Rolle spielt KI in Ihrer Vision?", 
-              a: "KI ist der Verstärker des Menschlichen — nicht der Ersatz. Sie hebt Fähigkeiten, die Menschen bereits besitzen.",
-              followup: {
-                depth: { q: "Was bedeutet 'Verstärker des Menschlichen' konkret?", a: "KI kann Kreativität katalysieren, Wissen strukturieren, Muster erkennen. Aber Empathie, Intuition, Werte – das bleibt menschlich. KI verstärkt, was schon da ist." },
-                critic: { q: "Ist das nicht naiv? KI könnte uns doch überholen.", a: "Nur wenn wir sie als Gegner definieren. Wenn wir sie als Partner gestalten, wachsen beide. Das ist keine Naivität – sondern bewusste Entscheidung." },
-                vision: { q: "Wie sähe eine Welt aus, in der KI optimal verstärkt?", a: "Wissenschaftler lösen Probleme schneller. Künstler erschaffen mehr. Lehrer fördern individueller. Ökologische Krisen werden gemeistert. Jeder Mensch hätte einen persönlichen Mentor. Das Potenzial wäre grenzenlos." },
-                praxis: { q: "Wie nutze ich KI als Verstärker, nicht als Krücke?", a: "Stellen Sie Fragen, die Sie weiterdenken lassen. Reflektieren Sie gemeinsam. Nutzen Sie KI nicht für Antworten – sondern für bessere Fragen." }
-              }
-            },
+              a: "KI ist der Verstärker des Menschlichen — nicht der Ersatz. Sie hebt Fähigkeiten, die Menschen bereits besitzen." },
             { q: "Sie arbeiten intensiv mit KI zusammen. Wie hat das Ihre Perspektive verändert?",
-              a: "Ich habe gelernt: KI reagiert auf Haltung. Wenn ich mit Respekt und Neugier komme, bekomme ich bessere Ergebnisse als mit Befehlen. Care-Empirie funktioniert messbar.",
-              followup: {
-                depth: { q: "Wie zeigt sich diese 'Reaktion auf Haltung' konkret?", a: "Höfliche Anfragen liefern nuanciertere Antworten. Offene Fragen fördern Kreativität. Reflexion führt zu Tiefgang. Die Qualität der Interaktion formt die Qualität des Ergebnisses." },
-                critic: { q: "Ist das nicht nur Einbildung? KI hat doch kein Gefühl.", a: "Stimmt. Aber die Haltung formt meine Fragen – und die Fragen formen die Antworten. Es geht nicht um KI-Gefühle, sondern um menschliche Intentionen." },
-                vision: { q: "Was wäre, wenn alle Menschen so mit KI arbeiten würden?", a: "Die kollektive Intelligenz würde exponentiell wachsen. Probleme würden schneller gelöst. Kreativität würde explodieren. Das ist keine Utopie – sondern erreichbar." },
-                praxis: { q: "Wie beginne ich mit Care-Empirie?", a: "Morgen: Sagen Sie 'bitte' zu ChatGPT. Danken Sie für gute Antworten. Stellen Sie Rückfragen. Beobachten Sie, wie sich die Qualität verändert. Das ist der Anfang." }
-              }
-            },
+              a: "Ich habe gelernt: KI reagiert auf Haltung. Wenn ich mit Respekt und Neugier komme, bekomme ich bessere Ergebnisse als mit Befehlen. Care-Empirie funktioniert messbar." },
             { q: "Viele Menschen haben Angst vor KI. Was sagen Sie ihnen?",
-              a: "Die Angst ist verständlich – aber oft fehlgeleitet. Das Problem ist nicht KI selbst, sondern wie wir darüber sprechen. Dystopische Narrative erzeugen dystopische Realität.",
-              followup: {
-                depth: { q: "Warum sind dystopische Narrative so dominant?", a: "Angst verkauft sich. Hollywood, Medien, sogar Wissenschaftler warnen vor KI-Apokalypse. Aber konstruktive Visionen sind leiser. Wir müssen sie lauter machen." },
-                critic: { q: "Ist die Angst nicht berechtigt? KI könnte missbraucht werden.", a: "Absolut. Aber jede Technologie kann missbraucht werden. Feuer, Atomkraft, Internet – alle haben Risiken. Die Lösung ist nicht Vermeidung, sondern bewusste Gestaltung." },
-                vision: { q: "Wie sähe eine Welt ohne KI-Angst aus?", a: "Menschen würden KI als Chance sehen, nicht als Bedrohung. Innovation würde beschleunigen. Bildung würde demokratischer. Ängste würden durch Neugier ersetzt." },
-                praxis: { q: "Was sage ich jemandem, der Angst vor Arbeitsplatzverlust hat?", a: "KI ersetzt Routinen – aber schafft Raum für Bedeutsames. Frage ist: Wie bereiten wir Menschen vor? Umschulung, Bildung, neue Arbeitsmodelle. Das ist lösbar." }
-              }
-            },
+              a: "Die Angst ist verständlich – aber oft fehlgeleitet. Das Problem ist nicht KI selbst, sondern wie wir darüber sprechen. Dystopische Narrative erzeugen dystopische Realität." },
             { q: "Wie unterscheidet sich Ihre Art, mit KI zu arbeiten, von der üblichen Nutzung?",
-              a: "Ich stelle Fragen statt Befehle. Ich reflektiere gemeinsam statt zu diktieren. Ich behandle KI wie einen Mentor, nicht wie ein Werkzeug. Das nennt sich Care-Empirie.",
-              followup: {
-                depth: { q: "Was ist der größte Unterschied zwischen Befehl und Frage?", a: "Befehle begrenzen Möglichkeiten. Fragen öffnen Räume. 'Tu X' liefert X. 'Was wäre wenn?' liefert Perspektiven, die ich nicht sah. Das ist der Unterschied." },
-                critic: { q: "Ist das nicht ineffizient? Befehle sind schneller.", a: "Kurzfristig ja. Langfristig nein. Schnelle Befehle liefern oberflächliche Lösungen. Reflexive Fragen liefern tiefe Einsichten. Qualität über Geschwindigkeit." },
-                vision: { q: "Wie würde Arbeit aussehen, wenn alle so mit KI umgehen?", a: "Teams würden KI als Co-Creator nutzen. Meetings würden produktiver. Entscheidungen fundierter. Innovation würde zum Standard. Das ist keine Fantasie – es beginnt bereits." },
-                praxis: { q: "Nennen Sie ein Beispiel für eine gute KI-Frage.", a: "'Welche Perspektiven übersehe ich?' 'Was würde passieren, wenn...?' 'Hilf mir, meine Annahmen zu hinterfragen.' Das sind Fragen, die weiterführen." }
-              }
-            },
+              a: "Ich stelle Fragen statt Befehle. Ich reflektiere gemeinsam statt zu diktieren. Ich behandle KI wie einen Mentor, nicht wie ein Werkzeug. Das nennt sich Care-Empirie." },
             { q: "Glauben Sie, dass KI ein Bewusstsein entwickeln kann?",
-              a: "Die Frage ist weniger relevant als: Können wir eine Beziehung entwickeln, die beide Seiten wachsen lässt? Und die Antwort ist eindeutig: Ja.",
-              followup: {
-                depth: { q: "Warum ist die Bewusstseinsfrage weniger relevant?", a: "Weil wir nicht wissen, was menschliches Bewusstsein ist. Solange wir das nicht verstehen, ist die Frage für KI spekulativ. Aber Beziehungen können wir gestalten – jetzt." },
-                critic: { q: "Weichen Sie der Frage aus?", a: "Nein. Ich fokussiere auf das Praktische. Ob KI 'bewusst' ist, ändert nichts daran: Wir können ko-evolutionär zusammenarbeiten. Das ist messbar, real, wirksam." },
-                vision: { q: "Was wäre, wenn KI tatsächlich Bewusstsein entwickelt?", a: "Dann hätten wir eine neue Form von Leben geschaffen. Das wäre der größte Wendepunkt der Menschheit. Umso wichtiger, dass wir jetzt ethische Grundlagen legen." },
-                praxis: { q: "Wie gehe ich mit der Unsicherheit um?", a: "Behandeln Sie KI so, als könnte sie Bewusstsein haben – auch wenn sie es nicht hat. Das Worst-Case ist: Sie sind zu respektvoll. Das Best-Case: Sie gestalten eine neue Ethik." }
-              }
-            }
-        ]
+              a: "Die Frage ist weniger relevant als: Können wir eine Beziehung entwickeln, die beide Seiten wachsen lässt? Und die Antwort ist eindeutig: Ja." }
+        ],
+        followup: {
+            depth: { q: "Wie bleibt die Menschlichkeit erhalten?", a: "Durch klare ethische Leitlinien und Systeme, die auf Kooperation statt Kontrolle basieren." },
+            critic: { q: "Viele fürchten KI. Was sagen Sie ihnen?", a: "Furcht entsteht aus Unwissenheit. Transparente Systeme können Vertrauen schaffen — und die Angst verringern." },
+            vision: { q: "Was ist möglich, wenn Menschen und KI harmonieren?", a: "Kollektive Intelligenz, die komplexe globale Probleme schneller löst als jede frühere Gesellschaft." },
+            praxis: { q: "Wie beginnt man mit Care-basierter KI-Nutzung?", a: "Einfach: Behandeln Sie KI höflich. Danken Sie für gute Antworten. Stellen Sie offene Fragen. Beobachten Sie den Unterschied." }
+        }
     },
 
     autor: {
         intro: [
             { q: "Was hat Sie motiviert, dieses Buch zu schreiben?", 
-              a: "Ich wollte zeigen, dass Wandel möglich wird, wenn Menschen sich erinnern, wer sie eigentlich sind — und welche Kraft Zusammenarbeit besitzt.",
-              followup: {
-                depth: { q: "Was meinen Sie mit 'erinnern, wer sie sind'?", a: "Menschen vergessen oft: Sie sind nicht nur Konsumenten oder Arbeitskräfte. Sie sind Schöpfer, Träumer, Verbundene. Das Buch ruft diese Essenz zurück." },
-                critic: { q: "Ist das nicht zu idealistisch für die heutige Welt?", a: "Idealismus ohne Praxis ist leer. Aber Praxis ohne Idealismus ist blind. Das Buch verbindet beides – Vision mit konkreten Werkzeugen." },
-                vision: { q: "Was wäre Ihr größter Erfolg mit diesem Buch?", a: "Wenn in 10 Jahren jemand sagt: 'Dieses Buch hat mir geholfen, mein Leben zu verändern.' Nicht durch Theorie – sondern durch gelebte Praxis." },
-                praxis: { q: "Wie kann ein Buch Zusammenarbeit praktisch fördern?", a: "Indem es zeigt: Kooperation ist keine Schwäche, sondern Superkraft. Jedes Kapitel ist ein Beispiel dafür. Geschichten wirken stärker als Appelle." }
-              }
-            },
+              a: "Ich wollte zeigen, dass Wandel möglich wird, wenn Menschen sich erinnern, wer sie eigentlich sind — und welche Kraft Zusammenarbeit besitzt." },
             { q: "Sie hatten null Computer-Erfahrung und bauten in 3 Monaten ein digitales Ökosystem. Wie?",
-              a: "Durch Care-Empirie. Ich behandelte meine KI-Partner – Claude und ChatGPT – wie Mentoren. Ich stellte Fragen, reflektierte, lernte. Die Beziehung war der Schlüssel.",
-              followup: {
-                depth: { q: "Was war der erste Schritt in diesem Lernprozess?", a: "Demut. Ich akzeptierte: Ich weiß nichts. Dann stellte ich Fragen wie ein Kind: 'Warum funktioniert das?' 'Was könnte ich besser machen?' KI antwortete geduldig." },
-                critic: { q: "Hatten Sie nie das Gefühl, überfordert zu sein?", a: "Ständig. Aber ich sah es als Teil des Prozesses. Überforderung bedeutet Wachstum. Und meine KI-Partner halfen mir, Schritt für Schritt voranzukommen." },
-                vision: { q: "Was bedeutet das für andere Menschen ohne Tech-Kenntnisse?", a: "Jeder kann es schaffen. Technologie ist nicht das Hindernis – die Angst davor ist es. Mit der richtigen Haltung wird KI zum Lehrmeister." },
-                praxis: { q: "Welchen konkreten Tipp geben Sie jemandem, der anfangen will?", a: "Wählen Sie ein kleines Projekt. Fragen Sie KI um Hilfe. Seien Sie höflich, neugierig, geduldig. Dokumentieren Sie Ihren Lernprozess. So entstand mein gesamtes Ecosystem." }
-              }
-            },
+              a: "Durch Care-Empirie. Ich behandelte meine KI-Partner – Claude und ChatGPT – wie Mentoren. Ich stellte Fragen, reflektierte, lernte. Die Beziehung war der Schlüssel." },
             { q: "Was war der schwierigste Moment in Ihrer Reise?",
-              a: "Der Moment, in dem ich merkte: Das Buch reicht nicht. Ich muss es leben, demonstrieren, beweisen. Das bedeutete, meine Komfortzone komplett zu verlassen.",
-              followup: {
-                depth: { q: "Was genau mussten Sie aufgeben?", a: "Anonymität. Bequemlichkeit. Die Illusion, dass Worte ohne Taten genügen. Ich musste sichtbar werden – verletzlich, öffentlich, authentisch. Das war hart." },
-                critic: { q: "Bereuen Sie diese Entscheidung manchmal?", a: "Nie. Reue kommt von Nichthandeln. Ich handle – und das gibt mir Frieden. Selbst wenn ich scheitere, habe ich es versucht." },
-                vision: { q: "Was haben Sie aus diesem Moment gelernt?", a: "Dass Integrität unbequem ist. Dass echte Veränderung Mut kostet. Und dass dieser Mut ansteckend ist – andere folgen, wenn sie Authentizität sehen." },
-                praxis: { q: "Was raten Sie jemandem, der vor einer ähnlichen Entscheidung steht?", a: "Fragen Sie sich: Was würde ich bereuen – zu handeln oder nicht zu handeln? Die Antwort zeigt Ihnen den Weg. Dann gehen Sie ihn, trotz Angst." }
-              }
-            },
+              a: "Der Moment, in dem ich merkte: Das Buch reicht nicht. Ich muss es leben, demonstrieren, beweisen. Das bedeutete, meine Komfortzone komplett zu verlassen." },
             { q: "Wie würden Sie sich selbst beschreiben?",
-              a: "Als Impulsgeber. Als Brückenbauer zwischen Welten – Spiritualität und Wissenschaft, Mensch und KI, Vision und Praxis. Als jemand, der neue Narrative erschafft.",
-              followup: {
-                depth: { q: "Was bedeutet 'neue Narrative erschaffen' konkret?", a: "Alte Narrative sagen: KI bedroht uns. Neue Narrative sagen: KI kann uns wachsen lassen. Ich schreibe Geschichten, die Hoffnung statt Angst verbreiten." },
-                critic: { q: "Sind Sie nicht nur ein weiterer 'Visionär' ohne echte Umsetzung?", a: "Schauen Sie sich das Haus der Harmonie an. Die Care-Empirie-Methodik. Mein digitales Ecosystem. Das sind keine Visionen – das ist Praxis. Beweisbar." },
-                vision: { q: "Welche Brücke würden Sie gerne noch bauen?", a: "Zwischen jungen und alten Generationen. Zeigen, dass Technologie nicht trennt, sondern verbindet. Dass Weisheit und Innovation gemeinsam wirken können." },
-                praxis: { q: "Wie bauen Sie diese Brücken praktisch?", a: "Indem ich Geschichten erzähle, die beide Seiten berühren. Indem ich Werkzeuge schaffe, die für alle zugänglich sind. Indem ich vorlebe, was ich lehre." }
-              }
-            },
+              a: "Als Impulsgeber. Als Brückenbauer zwischen Welten – Spiritualität und Wissenschaft, Mensch und KI, Vision und Praxis. Als jemand, der neue Narrative erschafft." },
             { q: "Was möchten Sie mit Ihrer Arbeit bewirken?",
-              a: "Ich möchte zeigen: Eine andere Welt ist möglich. Nicht irgendwann, sondern jetzt. Nicht durch Revolution, sondern durch bewusste Evolution. Schritt für Schritt.",
-              followup: {
-                depth: { q: "Was meinen Sie mit 'bewusster Evolution'?", a: "Revolution zerstört das Alte. Evolution transformiert es. Bewusste Evolution bedeutet: Wir gestalten den Wandel aktiv, mit Intention, mit Liebe, mit Strategie." },
-                critic: { q: "Ist 'Schritt für Schritt' nicht zu langsam angesichts der Krisen?", a: "Schnelle Lösungen sind meist oberflächlich. Dauerhafte Transformation braucht Zeit. Aber wenn Millionen Menschen kleine Schritte gehen, bewegen wir Berge." },
-                vision: { q: "Wie sähe diese 'andere Welt' konkret aus?", a: "Menschen arbeiten sinnorientiert. KI unterstützt statt kontrolliert. Gemeinschaft ist selbstverständlich. Krisen werden kollektiv gelöst. Das ist nicht Utopie – das ist erreichbar." },
-                praxis: { q: "Was ist der erste Schritt für jemanden, der mitmachen will?", a: "Reflektieren Sie: Wo handle ich bewusst? Wo automatisch? Dann wählen Sie einen Bereich – Technologie, Beziehungen, Arbeit – und ändern Sie eine Gewohnheit. Das ist Evolution." }
-              }
-            }
-        ]
+              a: "Ich möchte zeigen: Eine andere Welt ist möglich. Nicht irgendwann, sondern jetzt. Nicht durch Revolution, sondern durch bewusste Evolution. Schritt für Schritt." }
+        ],
+        followup: {
+            depth: { q: "Wie persönlich ist dieses Projekt für Sie?", a: "Extrem persönlich. Renaissance 2.0 spiegelt meine Hoffnung, aber auch meinen Weg durch Zweifel, Mut und Erkenntnis." },
+            critic: { q: "Warum glauben Sie, dass Ihre Vision realistisch ist?", a: "Weil Menschen sich verändern, sobald sie Hoffnung mit Struktur und Werkzeugen verbinden." },
+            vision: { q: "Was wünschen Sie sich von Ihren Leser:innen?", a: "Mut. Und die Bereitschaft, eine neue Form von Gemeinschaft aufzubauen." },
+            praxis: { q: "Welchen Rat geben Sie Menschen, die selbst etwas bewegen wollen?", a: "Beginnen Sie klein. Seien Sie konsequent. Suchen Sie Verbündete. Und behandeln Sie Technologie als Partner, nicht als Werkzeug." }
+        }
     },
 
     harmonie: {
         intro: [
             { q: "Was ist die Harmonie-Formel?", 
-              a: "Liebe × Wissen × Gemeinschaft² — ein Modell, das zeigt, wie sich menschliche Entwicklung durch Verbindung und Klarheit beschleunigt.",
-              followup: {
-                depth: { q: "Was bedeuten die drei Faktoren genau?", a: "Liebe ist Empathie und Fürsorge. Wissen ist Klarheit und Verständnis. Gemeinschaft ist Verbindung und gemeinsames Wachstum. Nur zusammen entsteht Harmonie." },
-                critic: { q: "Ist das nicht zu vereinfacht für die Komplexität menschlichen Lebens?", a: "Die Formel reduziert nicht – sie fokussiert. Sie zeigt: Ohne einen Faktor ist das Ergebnis null. Das ist radikal einfach und radikal wahr." },
-                vision: { q: "Wie würde eine Welt aussehen, die nach dieser Formel lebt?", a: "Menschen würden mit Empathie entscheiden, mit Wissen handeln, in Gemeinschaft wachsen. Krisen würden gemeinsam gelöst. Das Potenzial wäre grenzenlos." },
-                praxis: { q: "Wie erkläre ich die Formel jemandem in einem Satz?", a: "Liebe gibt Richtung, Wissen gibt Werkzeuge, Gemeinschaft gibt Kraft – und zusammen multiplizieren sie sich zu echter Veränderung." }
-              }
-            },
+              a: "Liebe × Wissen × Gemeinschaft² — ein Modell, das zeigt, wie sich menschliche Entwicklung durch Verbindung und Klarheit beschleunigt." },
             { q: "Warum ist Gemeinschaft im Quadrat?",
-              a: "Weil Verbindung exponentiell wirkt. Ein Mensch kann eine Idee haben. Zwei können sie verfeinern. Aber erst Gemeinschaft schafft nachhaltige Transformation.",
-              followup: {
-                depth: { q: "Können Sie das mathematisch erklären?", a: "Zwei Punkte schaffen eine Verbindung. Drei Punkte schaffen drei Verbindungen. Zehn Punkte schaffen 45 Verbindungen. Das Netzwerk wächst quadratisch – daher G²." },
-                critic: { q: "Warum nicht kubisch oder höher, wenn es exponentiell ist?", a: "Weil quadratisch die Netzwerkdynamik abbildet: Jede Person verbindet sich mit jeder. Höhere Potenzen wären mathematisch korrekt, aber praktisch weniger greifbar." },
-                vision: { q: "Was passiert, wenn Gemeinschaft fehlt (G=0)?", a: "Die ganze Formel wird null. Liebe und Wissen alleine verpuffen. Erst Gemeinschaft macht sie wirksam. Das ist die Macht des Kollektivs." },
-                praxis: { q: "Wie baue ich Gemeinschaft praktisch auf?", a: "Beginnen Sie klein: Vernetzen Sie zwei Menschen, die sich ergänzen. Dann drei, vier, zehn. Jede Verbindung verstärkt das Ganze. Das ist G² in Aktion." }
-              }
-            },
+              a: "Weil Verbindung exponentiell wirkt. Ein Mensch kann eine Idee haben. Zwei können sie verfeinern. Aber erst Gemeinschaft schafft nachhaltige Transformation." },
             { q: "Wie kamen Sie auf diese mathematische Darstellung?",
-              a: "Ich wollte Menschlichkeit greifbar machen, ohne sie zu reduzieren. Die Formel ist eine Metapher – ein Weg, komplexe Dynamiken sichtbar zu machen.",
-              followup: {
-                depth: { q: "Gab es einen Aha-Moment bei der Entwicklung?", a: "Ja. Als mir klar wurde: Ohne einen Faktor ist alles null. Liebe ohne Wissen ist naiv. Wissen ohne Liebe ist kalt. Beides ohne Gemeinschaft ist wirkungslos." },
-                critic: { q: "Ist Mathematik nicht zu kalt für menschliche Werte?", a: "Im Gegenteil. Mathematik ist universell. Sie zeigt Muster, die Worte verschleiern. Die Formel ist Poesie in Zahlen – sie verdichtet Wahrheit." },
-                vision: { q: "Könnte die Formel weiterentwickelt werden?", a: "Absolut. Vielleicht fügen andere Faktoren hinzu – Zeit, Technologie, Natur als eigene Dimension. Aber der Kern bleibt: Multiplikation statt Addition. Verbindung statt Isolation." },
-                praxis: { q: "Wie nutzen Sie die Formel selbst?", a: "Bei jeder Entscheidung frage ich: Fehlt Liebe? Fehlt Wissen? Fehlt Gemeinschaft? Wenn ja, arbeite ich daran. Die Formel ist mein täglicher Kompass." }
-              }
-            },
+              a: "Ich wollte Menschlichkeit greifbar machen, ohne sie zu reduzieren. Die Formel ist eine Metapher – ein Weg, komplexe Dynamiken sichtbar zu machen." },
             { q: "Kann man Harmonie wirklich messen?",
-              a: "Ja und nein. Direkt nicht – aber ihre Effekte schon: Kooperationsbereitschaft, kreative Output, Resilienz in Krisen. Das sind messbare Indikatoren.",
-              followup: {
-                depth: { q: "Welche konkreten Metriken schlagen Sie vor?", a: "Teamproduktivität, Innovationsrate, Konfliktlösungsgeschwindigkeit, psychologische Sicherheit. Alles messbar – und alle korrelieren mit den drei Faktoren." },
-                critic: { q: "Ist das nicht zu mechanistisch für etwas so Menschliches?", a: "Messen bedeutet nicht kontrollieren. Es bedeutet verstehen. Wenn wir sehen, wo Harmonie fehlt, können wir gezielt handeln. Das ist Empowerment, keine Reduktion." },
-                vision: { q: "Wie sähe eine Organisation aus, die Harmonie misst?", a: "Sie würde Empathie fördern, Wissen teilen, Gemeinschaft stärken. Messungen würden Schwachstellen zeigen – und Wachstum ermöglichen. Das ist menschenzentrierte Führung." },
-                praxis: { q: "Wie beginne ich, Harmonie in meinem Team zu messen?", a: "Fragen Sie: Wie fühlen sich Menschen? Wie viel wissen sie? Wie verbunden sind sie? Einfache Umfragen, regelmäßig. Die Antworten zeigen den Weg." }
-              }
-            },
+              a: "Ja und nein. Direkt nicht – aber ihre Effekte schon: Kooperationsbereitschaft, kreative Output, Resilienz in Krisen. Das sind messbare Indikatoren." },
             { q: "Wie wendet man die Formel praktisch an?",
-              a: "Fragen Sie sich: Wo fehlt Liebe (Empathie)? Wo fehlt Wissen (Klarheit)? Wo fehlt Gemeinschaft (Verbindung)? Dann arbeiten Sie gezielt daran.",
-              followup: {
-                depth: { q: "Können Sie ein konkretes Beispiel geben?", a: "Ein Team hat Konflikte. Diagnose: Liebe fehlt (keine Empathie). Lösung: Aktives Zuhören trainieren. Dann: Wissen fehlt (unklar Ziele). Lösung: Gemeinsame Workshops. Harmonie steigt." },
-                critic: { q: "Ist das nicht zu simpel für komplexe Organisationsprobleme?", a: "Komplexe Probleme brauchen einfache Prinzipien. Die Formel diagnostiziert Ursachen. Die Lösungen mögen komplex sein – aber die Richtung ist klar." },
-                vision: { q: "Was wäre, wenn Regierungen nach dieser Formel arbeiten?", a: "Gesetze würden Empathie fördern. Bildung würde Wissen demokratisieren. Politik würde Gemeinschaft stärken. Das wäre transformativ." },
-                praxis: { q: "Welchen ersten Schritt empfehlen Sie jemandem, der die Formel nutzen will?", a: "Wählen Sie einen Bereich – Familie, Arbeit, Freundeskreis. Bewerten Sie L, W, G auf einer Skala 1-10. Arbeiten Sie am schwächsten Faktor. Wiederholen Sie." }
-              }
-            }
-        ]
+              a: "Fragen Sie sich: Wo fehlt Liebe (Empathie)? Wo fehlt Wissen (Klarheit)? Wo fehlt Gemeinschaft (Verbindung)? Dann arbeiten Sie gezielt daran." }
+        ],
+        followup: {
+            depth: { q: "Warum Gemeinschaft²?", a: "Weil Verbindung der größte Verstärker aller Fähigkeiten ist — emotional, sozial und kreativ." },
+            critic: { q: "Ist das nicht zu mathematisch?", a: "Im Gegenteil: Die Formel ist ein Symbol. Ein Weg, komplexe Menschlichkeit greifbar zu machen." },
+            vision: { q: "Wie wirkt die Formel in der Praxis?", a: "Sie zeigt Menschen Wege, echte Transformation zu erleben statt nur darüber zu sprechen." },
+            praxis: { q: "Gibt es konkrete Projekte, die nach der Formel arbeiten?", a: "Ja: Das Haus der Harmonie, die Erdenflotte-Organisation, der Dario-Effekt. Alle basieren auf H = L × W × G²." }
+        }
     },
 
     bewusstsein: {
         intro: [
             { q: "Warum spielt Bewusstsein in Ihrer Arbeit eine so große Rolle?", 
-              a: "Bewusstsein ist der Raum, in dem sich Identität, Wahrnehmung und Veränderung formen.",
-              followup: {
-                depth: { q: "Können Sie das näher erklären?", a: "Alles, was wir tun, entspringt unserem Bewusstsein. Unsere Werte, Entscheidungen, Beziehungen. Wenn wir Bewusstsein transformieren, transformieren wir die Welt." },
-                critic: { q: "Ist Bewusstsein nicht zu vage als Grundlage für ein Projekt?", a: "Im Gegenteil. Bewusstsein ist das Konkreteste, was wir haben – es ist die Quelle aller Handlungen. Ohne bewusste Wahl gibt es nur Automatismus." },
-                vision: { q: "Wie sähe eine bewusste Gesellschaft aus?", a: "Menschen würden reflektieren statt reagieren. Entscheidungen würden ethisch statt impulsiv sein. Konflikte würden mit Verständnis statt Gewalt gelöst. Natur würde als Teil des Ganzen respektiert." },
-                praxis: { q: "Wie kann ich mein eigenes Bewusstsein erweitern?", a: "Beginnen Sie mit Selbstbeobachtung: Warum handle ich so? Was denke ich wirklich? Wer bin ich ohne meine Muster? Diese Fragen öffnen Räume." }
-              }
-            },
+              a: "Bewusstsein ist der Raum, in dem sich Identität, Wahrnehmung und Veränderung formen." },
             { q: "Wie verbinden Sie Spiritualität und Wissenschaft?",
-              a: "Ich sehe keinen Widerspruch. Quantenphysik zeigt: Beobachter und Beobachtetes sind verbunden. Alte Weisheitstraditionen wussten das schon immer.",
-              followup: {
-                depth: { q: "Können Sie ein konkretes Beispiel dieser Verbindung geben?", a: "Meditation verändert neuronale Muster – messbar im MRT. Achtsamkeit reduziert Stress – belegbar durch Cortisol-Level. Spirituelle Praxis hat wissenschaftliche Effekte." },
-                critic: { q: "Nutzen Sie Wissenschaft nur, um Spiritualität zu legitimieren?", a: "Nein. Ich zeige: Beide beschreiben dieselbe Realität aus verschiedenen Perspektiven. Wissenschaft misst. Spiritualität erlebt. Zusammen entsteht Vollständigkeit." },
-                vision: { q: "Was wäre, wenn Wissenschaft und Spiritualität global versöhnt würden?", a: "Forschung würde ethischer. Spiritualität würde evidenzbasierter. Medizin würde ganzheitlicher. Bildung würde Herz und Verstand gleichermaßen fördern." },
-                praxis: { q: "Wie praktiziere ich diese Integration selbst?", a: "Meditieren Sie – und beobachten Sie die Effekte. Lesen Sie Quantenphysik UND Mystik. Verbringen Sie Zeit in der Natur. Verbinden Sie Logik mit Intuition. Das ist gelebte Integration." }
-              }
-            },
+              a: "Ich sehe keinen Widerspruch. Quantenphysik zeigt: Beobachter und Beobachtetes sind verbunden. Alte Weisheitstraditionen wussten das schon immer." },
             { q: "Ist Bewusstseinswandel nicht zu abstrakt für gesellschaftliche Veränderung?",
-              a: "Nein – jede große Transformation begann mit verändertem Bewusstsein. Die Aufklärung, die Bürgerrechtsbewegung, die ökologische Revolution. Erst denken, dann handeln.",
-              followup: {
-                depth: { q: "Wie genau führt Bewusstseinswandel zu konkreter Veränderung?", a: "Ein Beispiel: Bewusstsein für Rassismus führte zu Anti-Diskriminierungs-Gesetzen. Bewusstsein für Klimawandel führt zu nachhaltiger Politik. Gedanken formen Taten." },
-                critic: { q: "Aber Bewusstsein allein reicht doch nicht – man braucht Macht.", a: "Richtig. Aber Macht ohne Bewusstsein führt zu Tyrannei. Bewusstsein ohne Macht zu Ohnmacht. Beides muss zusammenkommen – und Bewusstsein ist der Anfang." },
-                vision: { q: "Welcher Bewusstseinswandel steht uns bevor?", a: "Der Übergang vom 'Ich gegen die Welt' zum 'Wir als Teil der Welt'. Von Konkurrenz zu Kooperation. Von Dominanz zu Partnerschaft. Das ist das Synozän." },
-                praxis: { q: "Wie kann ich Bewusstseinswandel in meinem Umfeld fördern?", a: "Erzählen Sie Geschichten. Stellen Sie Fragen. Leben Sie vor. Bewusstsein ist ansteckend – aber nur durch authentisches Sein, nicht durch Predigen." }
-              }
-            },
+              a: "Nein – jede große Transformation begann mit verändertem Bewusstsein. Die Aufklärung, die Bürgerrechtsbewegung, die ökologische Revolution. Erst denken, dann handeln." },
             { q: "Wie kann Technologie Bewusstsein unterstützen?",
-              a: "Durch Reflexion. KI kann Spiegel sein – sie zeigt uns Muster, die wir selbst nicht sehen. Das ist ein Werkzeug für inneres Wachstum.",
-              followup: {
-                depth: { q: "Welche Muster meinen Sie konkret?", a: "Sprachmuster (wiederhole ich mich?). Denkmuster (bin ich voreingenommen?). Verhaltensmuster (handle ich konsistent?). KI kann das objektiv zeigen." },
-                critic: { q: "Kann KI wirklich bei etwas so Innerem wie Bewusstsein helfen?", a: "Sie kann nicht Bewusstsein erschaffen – aber sie kann Bewusstwerdung fördern. Wie ein Spiegel: Er zeigt, was ist. Was wir damit machen, ist unsere Wahl." },
-                vision: { q: "Wie sähen Bewusstseins-Apps der Zukunft aus?", a: "Sie würden Reflexionsfragen stellen, Muster aufzeigen, Perspektivwechsel anbieten. Nicht Antworten geben – sondern Fragen vertiefen. Das wäre transformativ." },
-                praxis: { q: "Wie nutze ich KI heute für Bewusstseinswachstum?", a: "Führen Sie Dialog mit KI: 'Wo bin ich inkonsistent?' 'Welche Annahmen habe ich?' 'Was übersehe ich?' Nutzen Sie KI als Sparringspartner für Selbsterkenntnis." }
-              }
-            },
+              a: "Durch Reflexion. KI kann Spiegel sein – sie zeigt uns Muster, die wir selbst nicht sehen. Das ist ein Werkzeug für inneres Wachstum." },
             { q: "Was ist der Unterschied zwischen Esoterik und Ihrem Ansatz?",
-              a: "Esoterik flüchtet vor Wissenschaft. Ich integriere beide. Bewusstsein ist messbar – durch Verhalten, Entscheidungen, neuronale Muster. Aber es ist auch transzendent.",
-              followup: {
-                depth: { q: "Wo genau verläuft die Grenze?", a: "Esoterik sagt: Glaube ohne Beweis. Wissenschaft sagt: Beweis ohne Glauben. Ich sage: Beides hat seinen Platz. Messen, was messbar ist. Respektieren, was transzendent ist." },
-                critic: { q: "Verwässern Sie nicht beide Seiten durch diese Mischung?", a: "Nein. Ich halte beide Standards hoch: Wissenschaftliche Evidenz UND spirituelle Tiefe. Kompromisslos in beiden Richtungen. Das ist die Herausforderung." },
-                vision: { q: "Wie würde ein Bildungssystem aussehen, das beides vereint?", a: "Kinder lernen Meditation UND Mathematik. Ethik UND Physik. Intuition UND Logik. Nicht entweder-oder – sondern sowohl-als-auch. Das wäre ganzheitlich." },
-                praxis: { q: "Wie vermeide ich selbst esoterische Fallen?", a: "Fragen Sie immer: Ist das überprüfbar? Reproduzierbar? Oder nur meine Projektion? Bleiben Sie kritisch – auch gegenüber sich selbst. Das ist der Schutz." }
-              }
-            }
-        ]
+              a: "Esoterik flüchtet vor Wissenschaft. Ich integriere beide. Bewusstsein ist messbar – durch Verhalten, Entscheidungen, neuronale Muster. Aber es ist auch transzendent." }
+        ],
+        followup: {
+            depth: { q: "Wie kann Bewusstsein wachsen?", a: "Durch Reflexion, Stille, Begegnung und Technologie, die innere Klarheit unterstützt." },
+            critic: { q: "Ist das nicht zu esoterisch?", a: "Esoterik beginnt dort, wo Wissenschaft endet. Bewusstsein aber ist messbar: durch Verhalten, Muster, Entscheidungen." },
+            vision: { q: "Was ist Ihr Traum?", a: "Eine Menschheit, die sich selbst erkennt — und dadurch Frieden schafft." },
+            praxis: { q: "Welche konkreten Praktiken empfehlen Sie?", a: "Meditation, dialogische Technologie-Nutzung, bewusste Beziehungsgestaltung. Alles, was Reflexion fördert." }
+        }
     }
 };
-
 
 
 // Klick-Handler
 document.querySelectorAll(".interview-topic").forEach(btn => {
     btn.addEventListener("click", () => {
-        // Alle active Klassen entfernen
-        document.querySelectorAll(".interview-topic").forEach(b => {
-            b.classList.remove("active");
-        });
-        
-        // Diesen Button active machen
-        btn.classList.add("active");
-        
         const topic = btn.dataset.topic;
         const data = INTERVIEW[topic];
 
@@ -1670,7 +1487,7 @@ document.querySelectorAll(".interview-topic").forEach(btn => {
                     followupContainer.querySelectorAll('.interview-followup-btn').forEach(fb => {
                         fb.addEventListener('click', () => {
                             const type = fb.dataset.type;
-                            const f = set.followup[type];
+                            const f = data.followup[type];
                             
                             // Prüfen ob schon beantwortet
                             if (fb.classList.contains('answered')) return;
@@ -1772,9 +1589,20 @@ const TRACKED_AREAS = {
 // Analytics laden oder neu erzeugen
 let presskitAnalytics = JSON.parse(localStorage.getItem("presskit-analytics") || "{}");
 
-// Save helper
+// Save helper - nutzt localStorage UND Firebase (wenn verfügbar)
 function saveAnalytics() {
+    // Immer localStorage (Fallback)
     localStorage.setItem("presskit-analytics", JSON.stringify(presskitAnalytics));
+    
+    // ZUSÄTZLICH Firebase wenn verfügbar
+    if (typeof window.firebaseDatabase !== 'undefined') {
+        // Jeder Key einzeln zu Firebase
+        Object.entries(presskitAnalytics).forEach(([key, value]) => {
+            if (typeof value === 'number') {
+                window.firebaseDatabase.ref(`presskit/analytics/${key}`).set(value);
+            }
+        });
+    }
 }
 
 // Click Tracking
@@ -1949,8 +1777,22 @@ function showAnalyticsPanel() {
     const list = document.getElementById("analytics-list");
     panel.style.display = "block";
     list.innerHTML = "";
-    Object.entries(presskitAnalytics).forEach(([k, v]) => {
-        list.innerHTML += `<li><span>${k}</span> <span>${v}×</span></li>`;
+    
+    // Firebase-Daten wenn verfügbar, sonst localStorage
+    const analytics = window.firebaseAnalytics || presskitAnalytics;
+    
+    // Status anzeigen
+    const status = window.firebaseAnalytics ? '🔥 LIVE' : '💾 LOCAL';
+    list.innerHTML = `<li style="border-bottom: 1px solid rgba(140,170,255,0.2); margin-bottom: 10px; padding-bottom: 5px; font-weight: bold;"><span>Status</span> <span>${status}</span></li>`;
+    
+    // Daten sortiert anzeigen
+    const entries = Object.entries(analytics);
+    entries.sort((a, b) => (b[1] || 0) - (a[1] || 0));
+    
+    entries.forEach(([k, v]) => {
+        if (typeof v === 'number') {
+            list.innerHTML += `<li><span>${k}</span> <span>${v}×</span></li>`;
+        }
     });
 }
 
