@@ -311,8 +311,8 @@
           <button class="ipc-chip" data-topic="synozaen">Das Synozän</button>
           <button class="ipc-chip" data-topic="harmonie">Formel der Harmonie</button>
           <button class="ipc-chip" data-topic="ki">KI & Menschheit</button>
-          <button class="ipc-chip" data-topic="autor">Autor & Motivation</button>
-          <button class="ipc-chip" data-topic="bewusstsein">Bewusstsein</button>
+          <button class="ipc-chip" data-topic="autor">Über den Autor</button>
+          <button class="ipc-chip" data-topic="bewusstsein">Spirituelle Ebene</button>
         </div>
         <div class="ipc-result hidden">
           <h4 class="ipc-result-title">Empfohlener Pfad:</h4>
@@ -341,8 +341,8 @@
           <button class="mil-chip" data-topic="synozaen">Das Synozän</button>
           <button class="mil-chip" data-topic="harmonie">Formel der Harmonie</button>
           <button class="mil-chip" data-topic="ki">KI & Menschheit</button>
-          <button class="mil-chip" data-topic="autor">Autor & Motivation</button>
-          <button class="mil-chip" data-topic="bewusstsein">Bewusstsein</button>
+          <button class="mil-chip" data-topic="autor">Dario Amavero</button>
+          <button class="mil-chip" data-topic="bewusstsein">Bewusstsein & Spiritualität</button>
         </div>
         <!-- RESULT BLOCK -->
         <div class="mil-result hidden">
@@ -387,7 +387,7 @@
           <button class="interview-topic" data-topic="synozaen">Das Synozän</button>
           <button class="interview-topic" data-topic="ki">KI & Menschheit</button>
           <button class="interview-topic" data-topic="autor">Autor & Motivation</button>
-          <button class="interview-topic" data-topic="harmonie">Formel der Harmonie</button>
+          <button class="interview-topic" data-topic="harmonie">Harmonie-Formel</button>
           <button class="interview-topic" data-topic="bewusstsein">Bewusstsein</button>
         </div>
         <!-- Ausgabe -->
@@ -796,6 +796,48 @@
          class="footer-dario-logo" 
          alt="Dario Amavero Signatur">
   </footer>
+
+  <!-- ================================================================ -->
+  <!-- FIREBASE INTEGRATION - Analytics & Download Tracking            -->
+  <!-- ================================================================ -->
+  <!-- Firebase SDKs (compat mode) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+  <!-- Firebase Init & Realtime Analytics -->
+  <script>
+    // Firebase Config (Renaissance 2 Projekt)
+    const firebaseConfig = {
+        apiKey: "AIzaSyC7_MmAoHl3C2raClULht-1g72srHYZ_nY",
+        authDomain: "renaissance-2.firebaseapp.com",
+        databaseURL: "https://renaissance-2-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "renaissance-2",
+        storageBucket: "renaissance-2.firebasestorage.app",
+        messagingSenderId: "17894760378",
+        appId: "1:17894760378:web:9354dbff834723b8ebc783"
+    };
+
+    // Firebase initialisieren
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+    
+    // Global verfügbar machen für scripts.js
+    window.firebaseDatabase = database;
+    
+    // Page View beim Laden tracken
+    database.ref('presskit/analytics/pageViews').transaction((current) => {
+      return (current || 0) + 1;
+    });
+
+    // LIVE Analytics Listener für Panel
+    database.ref('presskit/analytics').on('value', (snapshot) => {
+      const analytics = snapshot.val() || {};
+      // Global verfügbar machen für showAnalyticsPanel()
+      window.firebaseAnalytics = analytics;
+    });
+
+    console.log('🔥 Firebase connected: Analytics ready!');
+  </script>
 
 </body>
 </html>
