@@ -2415,3 +2415,33 @@ window.addEventListener('pageshow', (event) => {
     window.scrollTo(0, 0);
   }
 });
+
+// ===============================================
+// SOCIAL ASSETS MULTI-DOWNLOAD
+// ===============================================
+function downloadSocialAssets() {
+  const files = [
+    'assets/downloads/SET_A_clean.zip',
+    'assets/downloads/SET_B_creator_ready.zip',
+    'assets/downloads/SET_C_hero_social.zip'
+  ];
+  
+  // Downloads mit kleiner Verzögerung starten (Browser-freundlich)
+  files.forEach((file, index) => {
+    setTimeout(() => {
+      const link = document.createElement('a');
+      link.href = file;
+      link.download = file.split('/').pop(); // Filename extrahieren
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      // Firebase Tracking für jeden Download
+      if (typeof trackAnalytics === 'function') {
+        trackAnalytics(`download-social-set-${String.fromCharCode(65 + index)}`);
+      }
+    }, index * 500); // 500ms Verzögerung zwischen Downloads
+  });
+  
+  console.log('📦 Social Assets Download gestartet: 3 ZIPs');
+}
