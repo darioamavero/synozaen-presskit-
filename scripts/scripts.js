@@ -2417,31 +2417,45 @@ window.addEventListener('pageshow', (event) => {
 });
 
 // ===============================================
-// SOCIAL ASSETS MULTI-DOWNLOAD
+// SOCIAL ASSETS MULTI-DOWNLOAD (ROBUST)
 // ===============================================
 function downloadSocialAssets() {
   const files = [
-    'assets/downloads/SET_A_clean.zip',
-    'assets/downloads/SET_B_creator_ready.zip',
-    'assets/downloads/SET_C_hero_social.zip'
+    { url: 'assets/downloads/SET_A_clean.zip', name: 'SET A (Clean)' },
+    { url: 'assets/downloads/SET_B_creator_ready.zip', name: 'SET B (Creator Ready)' },
+    { url: 'assets/downloads/SET_C_hero_social.zip', name: 'SET C (Hero)' }
   ];
   
-  // Downloads mit kleiner Verzögerung starten (Browser-freundlich)
+  let downloadedCount = 0;
+  
+  // Downloads mit Feedback
   files.forEach((file, index) => {
     setTimeout(() => {
+      // Download starten
       const link = document.createElement('a');
-      link.href = file;
-      link.download = file.split('/').pop(); // Filename extrahieren
+      link.href = file.url;
+      link.download = file.url.split('/').pop();
+      link.target = '_blank'; // Wichtig für manche Browser!
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
       
-      // Firebase Tracking für jeden Download
+      downloadedCount++;
+      console.log(`📦 Download ${downloadedCount}/3: ${file.name}`);
+      
+      // Firebase Tracking
       if (typeof trackAnalytics === 'function') {
         trackAnalytics(`download-social-set-${String.fromCharCode(65 + index)}`);
       }
-    }, index * 500); // 500ms Verzögerung zwischen Downloads
+      
+      // Feedback nach letztem Download
+      if (downloadedCount === 3) {
+        console.log('✅ Alle 3 Social Assets Downloads gestartet!');
+        // Optional: User-Notification
+        // alert('3 ZIP-Dateien werden heruntergeladen!');
+      }
+    }, index * 800); // 800ms Verzögerung (mehr Zeit!)
   });
   
-  console.log('📦 Social Assets Download gestartet: 3 ZIPs');
+  console.log('🚀 Social Assets Download wird gestartet...');
 }
