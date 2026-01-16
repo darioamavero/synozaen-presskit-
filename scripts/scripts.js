@@ -1074,13 +1074,27 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", checkGlow);
   checkGlow();
   
-  // Copy Buttons
+  // Copy Buttons mit CTA
   const copyBtns = document.querySelectorAll(".hook-copy");
   copyBtns.forEach(btn => {
     btn.addEventListener("click", () => {
       navigator.clipboard.writeText(btn.dataset.text);
-      btn.textContent = "Kopiert ✓";
-      setTimeout(() => btn.textContent = "Kopieren", 1400);
+      
+      // Schritt 1: Bestätigung
+      btn.textContent = "✓ Kopiert!";
+      btn.classList.add('copied');
+      
+      // Schritt 2: CTA nach 800ms
+      setTimeout(() => {
+        btn.textContent = "📧 Jetzt mit Redaktionen teilen!";
+        btn.classList.add('cta-mode');
+      }, 800);
+      
+      // Schritt 3: Zurück zu Original nach 4 Sekunden
+      setTimeout(() => {
+        btn.textContent = "Kopieren";
+        btn.classList.remove('copied', 'cta-mode');
+      }, 4000);
     });
   });
 });
