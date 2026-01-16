@@ -105,6 +105,55 @@ p{ opacity: .9; font-size: 1.08rem; line-height: 1.65; }
 }
 .hero__text h1{ color:#fff; margin-top:0; }
 .hero__text p{ font-size:1.18rem; color:#cfe0ff; }
+
+/* ═══════════════════════════════════════════════════ */
+/* OFFICIAL PRESSKIT SEAL - ZENTRALES BRANDING         */
+/* ═══════════════════════════════════════════════════ */
+.hero-presskit-seal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;  /* Weniger Abstand vom Titel (war 4rem) */
+  margin-bottom: 2rem;  /* Weniger Abstand zu Panels (war 3rem) */
+  padding: 1rem 0;  /* Weniger Padding (war 2rem) */
+}
+
+.presskit-seal-image {
+  width: 264px;  /* 20% größer: 220px * 1.2 = 264px */
+  height: auto;
+  opacity: 0.95;
+  
+  /* Professioneller Glow & Shadow */
+  filter: 
+    drop-shadow(0 8px 24px rgba(0, 0, 0, 0.4))
+    drop-shadow(0 0 40px rgba(100, 180, 255, 0.4))
+    drop-shadow(0 0 60px rgba(255, 215, 0, 0.3));
+  
+  /* Smooth Transition für Hover */
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.presskit-seal-image:hover {
+  transform: scale(1.08) rotate(5deg);
+  opacity: 1;
+  filter: 
+    drop-shadow(0 12px 32px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 60px rgba(100, 180, 255, 0.6))
+    drop-shadow(0 0 80px rgba(255, 215, 0, 0.5));
+}
+
+/* Responsive: Kleineres Siegel auf Mobile */
+@media (max-width: 768px) {
+  .presskit-seal-image {
+    width: 192px;  /* 20% größer: 160px * 1.2 = 192px */
+  }
+  
+  .hero-presskit-seal {
+    margin-top: 2rem;  /* Auch auf Mobile weniger Abstand */
+    margin-bottom: 1.5rem;
+  }
+}
+
 button{
   border: 1px solid #4aa3ff66;
   background: #ffffff10;
@@ -1530,7 +1579,7 @@ body.matrix-open{
 .harmonius-container {
   position: fixed;
   left: 2rem;
-  top: 60%;  /* Tiefer für Sprechblase */
+  top: 28%;  /* Etwas tiefer - bessere Position */
   transform: translateY(-50%);
   z-index: 99999;
 }
@@ -1619,18 +1668,18 @@ body.matrix-open{
   }
 }
 
-/* Einladende Sprechblase - COMIC-STYLE ÜBER DEM KOPF! */
+/* Einladende Sprechblase - UNTER Harmonius! */
 .avatar-speech-bubble {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 360px;  /* HÖHER - mehr Abstand für Pfeil! */
+  top: 35px;  /* 3,5cm näher - direkt unter Harmonius! */
   
   pointer-events: none;
   z-index: 2;
 }
 
-/* SPEKTAKULÄRE Sprechblase */
+/* SPEKTAKULÄRE Sprechblase - KASTEN FAST UNSICHTBAR */
 .avatar-speech-bubble.spectacular {
   display: flex;
   flex-direction: column;
@@ -1639,51 +1688,28 @@ body.matrix-open{
   padding: 1.2rem 1.4rem;
   text-align: center;
   
-  /* Glassmorphism mit Gradient */
+  /* Kasten fast unsichtbar - nur hauch von Farbe */
   background: linear-gradient(135deg, 
-    rgba(100, 180, 255, 0.3), 
-    rgba(80, 160, 255, 0.25),
-    rgba(120, 200, 255, 0.3));
-  backdrop-filter: blur(16px) saturate(180%);
+    rgba(100, 180, 255, 0.02), 
+    rgba(80, 160, 255, 0.01),
+    rgba(120, 200, 255, 0.03));
+  backdrop-filter: blur(8px) saturate(120%);
   
-  /* Gradient Border */
-  border: 2px solid transparent;
+  /* Fast unsichtbarer Border */
+  border: 0.5px solid rgba(100, 180, 255, 0.08);
   background-clip: padding-box;
   position: relative;
   border-radius: 20px;
   
-  /* Glow & Shadow */
+  /* Minimaler Glow - kaum sichtbar */
   box-shadow: 
-    0 12px 40px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3),
-    0 0 60px rgba(100, 180, 255, 0.5),
-    0 0 30px rgba(255, 215, 0, 0.3);
+    0 4px 16px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 0 20px rgba(100, 180, 255, 0.1);
   
   /* IMMER SICHTBAR ZUM TESTEN! */
   opacity: 1 !important;
   /* animation: spectacularBubbleFade 6s ease-in-out infinite 2s; */
-}
-
-/* Gradient Border Trick */
-.avatar-speech-bubble.spectacular::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 20px;
-  padding: 2px;
-  background: linear-gradient(135deg, 
-    rgba(100, 180, 255, 0.6),
-    rgba(255, 215, 0, 0.4),
-    rgba(100, 180, 255, 0.6));
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  z-index: -1;
 }
 
 /* Icon Container - OBEN im Bubble */
@@ -1735,16 +1761,16 @@ body.matrix-open{
 .avatar-speech-bubble::after {
   content: '';
   position: absolute;
-  bottom: -12px;
+  top: -12px;  /* Pfeil oben (war bottom) */
   left: 50%;
   transform: translateX(-50%);
   width: 0;
   height: 0;
-  /* Dreieck nach unten */
+  /* Dreieck nach OBEN (zu Harmonius) - fast unsichtbar */
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
-  border-top: 12px solid rgba(100, 180, 255, 0.3);
-  filter: drop-shadow(0 2px 0 rgba(100, 180, 255, 0.3));
+  border-bottom: 12px solid rgba(100, 180, 255, 0.05);  /* Fast unsichtbar */
+  filter: drop-shadow(0 -2px 0 rgba(100, 180, 255, 0.03));
 }
 
 /* Spektakuläre Animation */
@@ -2791,10 +2817,42 @@ body.scrolling-calm::after {
     border-radius: 999px;
     color: #ffe8b8;
     cursor: pointer;
-    transition: background .2s;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
+
 .hook-copy:hover {
     background: rgba(255,220,160,0.25);
+    transform: translateY(-2px);
+}
+
+/* State: Gerade kopiert */
+.hook-copy.copied {
+    background: rgba(100, 220, 150, 0.2);
+    border-color: rgba(100, 220, 150, 0.7);
+    color: #b0ffcc;
+}
+
+/* State: CTA Mode - "Jetzt teilen!" */
+.hook-copy.cta-mode {
+    background: linear-gradient(135deg, 
+        rgba(255, 180, 100, 0.25), 
+        rgba(255, 220, 160, 0.25));
+    border-color: rgba(255, 180, 100, 0.8);
+    color: #ffd699;
+    font-weight: 500;
+    box-shadow: 0 0 20px rgba(255, 200, 100, 0.3);
+    animation: ctaPulse 2s ease-in-out;
+}
+
+/* Pulsing Animation für CTA */
+@keyframes ctaPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 200, 100, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 200, 100, 0.5);
+  }
 }
 
 /* ──────────────────────────────────────────────── */
@@ -2874,6 +2932,33 @@ body.scrolling-calm::after {
     color: rgba(255,255,255,0.5);
     font-style: italic;
     line-height: 1.4;
+}
+
+/* Format-Hinweise für Assets */
+.format-hints {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 0.8rem 0 1rem 0;
+}
+
+.format-tag {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: rgba(100, 180, 255, 0.15);
+    border: 1px solid rgba(100, 180, 255, 0.3);
+    border-radius: 999px;
+    color: #b8d4ff;
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease;
+}
+
+.format-tag:hover {
+    background: rgba(100, 180, 255, 0.25);
+    border-color: rgba(100, 180, 255, 0.5);
+    transform: translateY(-1px);
 }
 
 /* ─────────────────────────────────────────────── */
@@ -3062,7 +3147,25 @@ body.scrolling-calm::after {
     margin-bottom: .4rem;
     color: #fff;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
 }
+
+/* Interview Icon neben dem Titel */
+.interview-icon {
+    width: 48px;  /* Größer: 36px → 48px */
+    height: auto;
+    opacity: 0.95;
+    filter: drop-shadow(0 0 8px rgba(255, 220, 160, 0.4));
+    transition: transform 0.3s ease;
+}
+
+.interview-title:hover .interview-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
 .interview-subtitle {
     text-align: center;
     opacity: 0.85;
@@ -3340,8 +3443,19 @@ body.scrolling-calm::after {
 .story-card h4 {
   color: #e8ecff;
   font-size: 0.95rem;
-  margin: 0;
+  margin: 0 0 0.5rem 0;  /* Abstand nach unten für Teaser */
 }
+
+/* Mini-Teaser unterhalb des Titels */
+.story-teaser {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0;
+  font-style: italic;
+  opacity: 0.9;
+}
+
 .story-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 0 18px rgba(170, 200, 255, 0.35);
@@ -3458,23 +3572,6 @@ body.scrolling-calm::after {
 
 /* === HERO SECTION === */
 /* Synozän Symbol - schwebend rechts oben */
-.hero-synozaen-symbol {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  width: 80px;
-  height: auto;
-  opacity: 0.95;
-  filter: drop-shadow(0 0 12px rgba(100, 200, 255, 0.7));
-  transition: transform 0.3s ease, filter 0.3s ease;
-  z-index: 10;
-}
-
-.hero-synozaen-symbol:hover {
-  transform: scale(1.08) rotate(3deg);
-  filter: drop-shadow(0 0 20px rgba(120, 220, 255, 0.9));
-}
-
 /* === STORY-PFADE SECTION === */
 /* Renaissance 2.0 Logo als Kapitel-Header */
 .story-renaissance-logo {
@@ -3575,20 +3672,6 @@ body.scrolling-calm::after {
 }
 
 /* === HARMONIE FORMEL LOGO === */
-.harmonie-formula-logo {
-  display: block;
-  margin: 0 auto 1.5rem auto;
-  width: 130px;
-  height: auto;
-  opacity: 0.96;
-  filter: drop-shadow(0 0 14px rgba(255, 220, 160, 0.6));
-  transition: transform 0.3s ease;
-}
-
-.harmonie-formula-logo:hover {
-  transform: scale(1.06);
-}
-
 /* === NAVIGATOR === */
 /* Icon im Navigator Button */
 .nav-btn-icon {
