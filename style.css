@@ -2749,6 +2749,70 @@ body.scrolling-calm::after {
     color: #c0e0ff;
 }
 
+/* Deepdive Block - Wissenschaftliche Vertiefung */
+.media-block-deepdive {
+    background: linear-gradient(135deg, rgba(25, 40, 70, 0.7), rgba(15, 30, 55, 0.7));
+    border-color: rgba(140, 200, 255, 0.35);
+}
+
+.deepdive-intro {
+    font-size: 1.02rem;
+    line-height: 1.65;
+    color: #d5e2ff;
+    margin-bottom: 1.5rem;
+}
+
+.deepdive-links {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.deepdive-links li {
+    margin-bottom: 1.2rem;
+}
+
+.deepdive-links li:last-child {
+    margin-bottom: 0;
+}
+
+.deepdive-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    background: rgba(20, 30, 50, 0.5);
+    border: 1px solid rgba(120, 180, 255, 0.3);
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.deepdive-link:hover {
+    background: rgba(30, 45, 70, 0.7);
+    border-color: rgba(140, 200, 255, 0.5);
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(120, 180, 255, 0.2);
+}
+
+.deepdive-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 6px rgba(255, 220, 160, 0.4));
+}
+
+.deepdive-link strong {
+    color: #ffd27f;
+    font-size: 1.05rem;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.deepdive-link:hover strong {
+    color: #ffe7a8;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .fact-item {
