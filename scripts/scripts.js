@@ -2319,6 +2319,26 @@ const presskitContent = {
       </div>
     </div>
 
+    <h3>📚 Rezensionsexemplare & Interview-Anfragen</h3>
+    
+    <p>
+      Für Journalist:innen, Podcaster:innen und Rezensent:innen stellen wir gerne 
+      signierte Rezensionsexemplare zur Verfügung.
+    </p>
+    
+    <ul>
+      <li><strong>Anfrage per E-Mail:</strong> <a href="mailto:info@darioamavero.de" style="color:#a0beff;">info@darioamavero.de</a></li>
+      <li><strong>Antwortzeit:</strong> Innerhalb von 24-48 Stunden</li>
+      <li><strong>Verfügbarkeit:</strong> Als Paperback (signiert) oder E-Book</li>
+      <li><strong>ISBN:</strong> 978-3-69089-018-2</li>
+    </ul>
+    
+    <p style="margin-top: 1em;">
+      Für Interview-Anfragen bevorzugen wir tiefgehende Formate (45-60 Minuten). 
+      Wir melden uns schnellstmöglich zurück und finden gemeinsam den passenden 
+      Rahmen für Ihr Medium.
+    </p>
+
     <h3>🎙️ Verfügbarkeit für Medien</h3>
 
     <ul>
