@@ -1424,9 +1424,7 @@ const INTERVIEW = {
             vision: { q: "Was ist Ihr Traum?", a: "Eine Menschheit, die sich selbst erkennt — und dadurch Frieden schafft." },
             praxis: { q: "Welche konkreten Praktiken empfehlen Sie?", a: "Meditation, dialogische Technologie-Nutzung, bewusste Beziehungsgestaltung. Alles, was Reflexion fördert." }
         }
-    }
-};
-
+    },
 
     kritisch: {
         intro: [
