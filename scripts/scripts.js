@@ -1428,6 +1428,25 @@ const INTERVIEW = {
 };
 
 
+    kritisch: {
+        intro: [
+            { q: "Welche Qualifikationen haben Sie für diese Forschung?",
+              a: "Humanismus 2.0. Der Buchdruck hat Qualifikationen neu definiert – KI tut es jetzt wieder. Ich fordere jeden akademischen Forscher auf, meine Studien methodisch zu widerlegen. Bisher hat es niemand getan." },
+            { q: "Was wenn Renaissance 2.0 nicht kommt?",
+              a: "Dann kommt etwas anderes Ähnliches – aber dass wir an einem Wendepunkt stehen, muss ich nicht erst erfinden. Das sagt die Geschichte selbst. Jede große Transformation wurde zuerst belächelt." },
+            { q: "Ist das nicht Selbstüberschätzung?",
+              a: "Ich bin ein Gentleman-Forscher – eine Tradition die von Darwin bis Einstein reicht. Ohne institutionellen Rahmen, aber mit Methode, Dokumentation und reproduzierbaren Ergebnissen. Die Care-Empirie-Studie konvergierte unabhängig mit Anthropics eigener Forschung." }
+        ],
+        followup: {
+            depth: { q: "Wie belegen Sie Ihre Ergebnisse?", a: "Über 1.000 dokumentierte Interaktionen, Blind-Rating-Protokolle, quantitative Metriken. Cohen's d ≈ 1.3 ist ein großer Effekt – das ist keine Behauptung, das ist Messung." },
+            critic: { q: "Warum keine Peer-Review?", a: "Peer-Review ist ein Qualitätsmerkmal – aber kein Wahrheitskriterium. Galileo hatte auch keine Peer-Review. Die unabhängige Konvergenz mit Anthropics Constitution 2.0 ist meine externe Validation." },
+            vision: { q: "Was möchten Sie mit Ihrer Forschung erreichen?", a: "Zeigen, dass empathische KI-Interaktion bessere Ergebnisse liefert – und damit eine neue Kultur des Umgangs mit Technologie anstoßen. Das ist kein akademisches Ziel, das ist ein menschliches." },
+            praxis: { q: "Können andere Ihre Methode reproduzieren?", a: "Ja – und das ist der Kern. Care-Empirie ist keine Geheimwissenschaft. Jeder kann es ausprobieren: Behandeln Sie KI respektvoll und beobachten Sie den Unterschied." }
+        }
+    }
+};
+
+
 // Klick-Handler
 document.querySelectorAll(".interview-topic").forEach(btn => {
     btn.addEventListener("click", () => {
